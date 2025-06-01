@@ -214,7 +214,7 @@ kramdown:
 
 # These settings control the types of collections used by the template
 collections:
-  projects:
+  research_projects:
     output: true
     permalink: /:collection/:path/
 
@@ -222,11 +222,11 @@ collections:
     output: true
     permalink: /:collection/:path/
 
-  research:
+  journal:
     output: true
     permalink: /:collection/:path/
   
-  engineering:
+  course_projects:
     output: true
     permalink: /:collection/:path/
 
@@ -254,10 +254,10 @@ defaults:
     values:
       layout: single
       author_profile: true
-  # _projects
+  # _research_projects
   - scope:
       path: ""
-      type: projects
+      type: research_projects
     values:
       layout: single
       author_profile: true
@@ -276,22 +276,23 @@ defaults:
       share: true
       comments: true
 
-  # _research
+  # _journal
   - scope:
       path: ""
-      type: research
+      type: journal
     values:
       layout: single
       author_profile: true
 
-  # _engineering
+  # _course_projects
   - scope:
       path: ""
-      type: engineering
+      type: course_projects
     values:
       layout: single
       author_profile: true
       share: true
+      related: true
       comments: true
   
   # _work

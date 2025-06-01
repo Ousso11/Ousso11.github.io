@@ -26,11 +26,17 @@ author_profile: true
       {% include archive-single.html %}
     {% endfor %}
   {% endfor %}
+  <!-- Show uncategorized publications -->
+  {% assign categorized = site.publications | where_exp:"post","post.category" %}
+  {% for post in site.publications reversed %}
+    {% unless categorized contains post %}
+      {% include archive-single.html %}
+    {% endunless %}
+  {% endfor %}
 {% else %}
   {% for post in site.publications reversed %}
     {% include archive-single.html %}
   {% endfor %}
 {% endif %}
-
 
 
