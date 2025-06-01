@@ -25,7 +25,7 @@ author:
   avatar           : "profile.png"
   name             : "Oussama Gabouj"
   pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
+  bio: "Master student in Data Science | Minor in Cybersecurity @ EPFL"
   location         : "Lausanne, Switzerland"
   employer         : "EPFL"
   uri              : # URL
