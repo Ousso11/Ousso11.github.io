@@ -4,6 +4,8 @@ excerpt: "A robotic system developed for real-time order collection in a restaur
 collection: course_projects
 share: false
 related: false
+reporturl: "../../files/RobotiqueProject.pdf"
+
 ---
 
 ## Problem Statement & Motivation
@@ -64,8 +66,3 @@ The final application enables predictive analytics and restaurant workflow optim
 - **Wireless charging** and **autonomous docking**
 - **Multilingual voice interface** for human interaction
 - More advanced **barcode or QR scanning**
-
-
-## Publication & Resources
-- **Authors**: Oussama Gabouj, Adam Ben SLama
-- **Report PDF**: [Download Full Project Report (PDF)](https://Ousso11.github.io/files/RobotiqueProject.pdf)

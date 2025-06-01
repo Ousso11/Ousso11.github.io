@@ -4,6 +4,8 @@ excerpt: "This project investigates how to accelerate motor skill acquisition in
 collection: research_projects
 share: false
 related: false
+reporturl: "../../files/Reinforcement_Learning_report.pdf"
+
 ---
 
 ## Problem Statement & Motivation
@@ -61,6 +63,5 @@ We also test projection/back-projection methods and latent space exploration for
 - **Authors**: Oussama Gabouj, Salim Boussofara, Ahmed Aziz Ben Haj Hmida
 - **Course**: EE-568 - Reinforcement learning
 - **Institution**: EPFL  
-- **PDF Report**: [Download Full Report](https://Ousso11.github.io/files/Reinforcement_Learning_report.pdf)
-- **PDF Poster**: [Download Full Report](https://Ousso11.github.io/files/Reinforcement_Learning_Poster.pdf)
+- **PDF Poster**: [Download Full Report](../../files/Reinforcement_Learning_Poster.pdf)
 

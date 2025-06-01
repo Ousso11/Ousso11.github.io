@@ -4,6 +4,8 @@ excerpt: "This project explores the design and implementation of a decentralized
 collection: course_projects
 share: false
 related: false
+reporturl: "../../files/NameCoin.pdf"
+
 ---
 
 ## Problem Statement & Motivation
@@ -61,4 +63,3 @@ We performed **unit**, **integration**, and **performance tests**, including:
 - **Authors**: Oussama Gabouj, Rassene M’sadaa, Ahmed Abdelmalek  
 - **Course**: CS438 - Decentralized Systems  
 - **Institution**: EPFL  
-- **PDF Report**: [Download Full Report]('https://Ousso11.github.io/files/NameCoin.pdf')

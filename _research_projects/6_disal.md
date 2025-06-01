@@ -4,6 +4,8 @@ excerpt: "This project was conducted at [DISAL, EPFL](https://www.epfl.ch/labs/d
 collection: research_projects
 share: false
 related: false
+reporturl: "../../files/DISAL_final_report.pdf"
+
 ---
 
 ## Problem Statement & Motivation

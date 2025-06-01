@@ -4,6 +4,7 @@ excerpt: "This project explores multiple deep learning models—including CNNs, 
 collection: course_projects
 share: false
 related: false
+slidesurl: "../../files/Coin_counter.pptx"
 ---
 
 ## Problem Statement & Motivation
@@ -80,4 +81,3 @@ The models were evaluated qualitatively and quantitatively:
 - **Authors**: Oussama Gabouj, Salim Boussofara, Yasmine Chaker
 - **Course**: EE-451 - Image analysis and pattern recognition
 - **Institution**: EPFL  
-- **PDF Report**: [Download Full Report](https://Ousso11.github.io/files/Coin counter.pptx)
