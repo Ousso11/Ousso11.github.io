@@ -4,6 +4,7 @@ excerpt: "We developed an educational chatbot built on the quantized Gemma 7B mo
 collection: research_projects
 share: false
 related: false
+reporturl: "../../files/GemmaEdu.pdf"
 ---
 
 ## Problem Statement & Motivation
@@ -72,4 +73,3 @@ We built an advanced educational chatbot based on the **quantized Gemma 7B** mod
 - **Authors**: Oussama Gabouj, Salim Boussofara, Yasmine Chaker
 - **Course**: CS-552 - Modern Natural Language Processing
 - **Institution**: EPFL  
-- **PDF Report**: [Download Full Report]('https://Ousso11.github.io/files/GemmaEdu.pdf')
