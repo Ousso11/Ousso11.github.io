@@ -1,6 +1,6 @@
 ---
 title: "Coin Counter: Deep Learning for Robust Multi-Class Coin Detection and Classification"
-excerpt: "This project explores multiple deep learning models: CNNs, ResNet50, and Vision Transformers—for classifying coins in images. We use advanced segmentation techniques, custom over-segmentation filtering, and data augmentation to improve generalization. Developed for the EPFL IAPR course, this system demonstrates competitive accuracy and robustness for automated coin recognition tasks."
+excerpt: "This project explores multiple deep learning models: CNNs, ResNet50, and Vision Transformers, for classifying coins in images. We use advanced segmentation techniques, custom over-segmentation filtering, and data augmentation to improve generalization. Developed for the EPFL IAPR course, this system demonstrates competitive accuracy and robustness for automated coin recognition tasks."
 collection: course_projects
 share: false
 related: false
