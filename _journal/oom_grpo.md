@@ -1,5 +1,5 @@
 ---
-title: "Resolving OOM in PPO/GRPO with Large Models on A100 GPUs"
+title: "Resolving OOM in PPO/GRPO with Large Models"
 collection: journal
 excerpt: "PPO and GRPO training with models >7B caused OOM errors on A100 GPUs due to multiple full model replicas. This post details optimization strategies to fix it."
 
@@ -40,8 +40,6 @@ Enabled **gradient checkpointing** to reduce memory during backward passes. Howe
 ### 3. 🌸 Use bfloat16 / float16 Precision (No Quantization)
 
 Switched model precision to **bfloat16** or **float16** (depending on model support), which reduced memory usage **without quantizing weights**. This preserved model performance while keeping memory consumption manageable.
-
----
 
 ## 💡 Takeaway
 

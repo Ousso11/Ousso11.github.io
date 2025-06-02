@@ -45,8 +45,6 @@ We applied the following stack of improvements to **significantly boost speed** 
 - Patched training logic to ensure **checkpoint recovery works** after mid-run failures in distributed settings (especially with `torchrun` + deepspeed).
 - Ensured optimizer and scheduler states resume correctly to avoid performance drift.
 
----
-
 ## 🚀 Outcome
 
 With this setup:
@@ -55,8 +53,6 @@ With this setup:
 - We ran **7B+ parameter models** across multiple nodes **without hitting OOM**
 - **Checkpoint resume was robust**, making experimentation safer and faster
 - Overall system throughput increased by **2–4×** depending on hardware and model config
-
----
 
 ## 💡 Takeaway
 

@@ -23,7 +23,6 @@ We build on existing approaches like **REKINDLE** and **RENAISSANCE**, training 
 
 - **Latent Control**: Demonstrates how the generator’s latent space can be navigated to produce new kinetic models with desired properties.
 - **Cross-Physiology Repurposing**: Allows transfer from one strain or condition (e.g., wild-type) to another (e.g., recombinant or fast-growing).
-- **Applications**: Showcased through simulations in *E. coli* metabolism, identifying response times and bottlenecks, and improving model generalizability.
 - **Scalable Parameter Inference**: Offers an interpretable and efficient alternative to Monte Carlo or ensemble methods.
 
 ## Publication Details
