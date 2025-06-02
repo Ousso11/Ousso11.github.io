@@ -1,7 +1,7 @@
 ---
 title: "Prompting Beyond Retrieval with GRAD: A Generative Retrieval-Aligned
 Demonstrator for Robust Few-Shot Reasoning"
-excerpt: "This project was conducted at [DLab, EPFL](https://dlab.epfl.ch). We propose **GRAD**: a generative, retrieval-free demonstration generator for LLMs.  GRAD tailors concise, input-specific prompts to improve multi-step reasoning under strict token limits.   Unlike RAG, GRAD requires no external retrieval and adapts across diverse STEM domains.   Trained only on math data, it generalizes to OOD tasks in physics, chemistry, and CS. It enables scalable, low-cost few-shot learning in resource-constrained settings.
+excerpt: "This project was conducted at [DLab, EPFL](https://dlab.epfl.ch). We propose **GRAD**: a generative, retrieval-free demonstration generator for LLMs.  GRAD tailors concise, input-specific prompts to improve multi-step reasoning under strict token limits.   Unlike RAG, GRAD requires no external retrieval and adapts across out of distribution (OOD) domains.   Trained only on math data, it generalizes to OOD tasks in physics, chemistry, and CS. It enables scalable, low-cost few-shot learning in resource-constrained settings.
 
 This work has been submitted to **EMNLP 2025**. The code repository will be made public upon acceptance."
 collection: research_projects
@@ -20,7 +20,7 @@ Large Language Models (LLMs) excel at reasoning but often struggle with multi-st
 We design a **two-stage architecture**:
 
 1. **Demonstration Generator**: An LLM is trained to generate concise, input-specific demonstrations for few-shot prompting.
-2. **Answering Model**: A frozen LLM (e.g., Qwen2.5-14B) receives the generated prompt and produces the final answer.
+2. **Answering Model**: A frozen LLM receives the generated prompt and produces the final answer.
 
 This architecture decouples demonstration generation from reasoning, offering greater modularity and control.
 

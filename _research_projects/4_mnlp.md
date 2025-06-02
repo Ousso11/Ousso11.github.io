@@ -1,6 +1,6 @@
 ---
 title: "GemmaEdu: Enhancing Scientific Learning via Fine-Tuned Language Models and RAG"
-excerpt: "We developed an educational chatbot built on the quantized Gemma 7B model, optimized with Direct Preference Optimization (DPO) and enhanced with Retrieval-Augmented Generation (RAG). By leveraging fine-tuning on student-generated preference data and incorporating relevant external documents, our system significantly improves accuracy in answering STEM multiple-choice questions, outperforming baseline models like Mistral and Llama2."
+excerpt: "We developed an educational chatbot built on the quantized Gemma 2 7B model, optimized with Direct Preference Optimization (DPO) and enhanced with Retrieval-Augmented Generation (RAG). By leveraging fine-tuning on student-generated preference data and incorporating relevant external documents, our system significantly improves accuracy in answering STEM multiple-choice questions, outperforming baseline models like Mistral and Llama2."
 collection: research_projects
 share: false
 related: false
@@ -19,7 +19,7 @@ We built an advanced educational chatbot based on the **quantized Gemma 7B** mod
 
 ### 1. Fine-Tuning with Direct Preference Optimization (DPO)
 
-- **Preference data** was generated from 100+ MCQs by EPFL Master students across CS, physics, EE, and AI topics.
+- **Preference data** was generated from 2k MCQs by EPFL Master students across CS, physics, EE, and AI topics.
 - We fine-tuned the model with **DPO-only** and **SFT + DPO** approaches.
 - The best-performing model used only DPO on a merged dataset (M1 + Argilla), improving both **accuracy** and **margin** scores.
 
@@ -41,7 +41,7 @@ We built an advanced educational chatbot based on the **quantized Gemma 7B** mod
 - **Dataset**: Subset of **MMLU** (focusing on 22 STEM subjects).
 - **Metrics**: Accuracy and margin on MCQ responses.
 - **Comparisons**: Baselines include:
-  - `unsloth/gemma-7b-bnb-4bit`
+  - Gemma-7B
   - Llama2-7B
   - Mistral-7B
 
@@ -62,14 +62,5 @@ We built an advanced educational chatbot based on the **quantized Gemma 7B** mod
 
 - **Noise in student-generated data** limited DPO training efficiency.
 - **RAG chunk tuning** and **prompt wording** were crucial for effectiveness.
-- Future improvements include:
-  - Larger multilingual RAG databases.
-  - Better prompt patterns for concise answer generation.
-  - Real-time feedback and adaptability features.
+- Future improvements include better prompt patterns for concise answer generation.
 
-
-## Project Report
-
-- **Authors**: Oussama Gabouj, Salim Boussofara, Yasmine Chaker
-- **Course**: CS-552 - Modern Natural Language Processing
-- **Institution**: EPFL  

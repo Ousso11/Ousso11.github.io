@@ -1,6 +1,6 @@
 ---
 title: "Kinetic Parameter Inference in Metabolic Networks via Latent Space Exploration"
-excerpt: "We present a novel framework to interpret and control the latent spaces of generative neural network models for kinetic metabolic modeling. By perturbing structured latent spaces learned via REKINDLE or RENAISSANCE, our method generates new dynamic models with targeted properties—such as specific response times, regulatory bottlenecks, or alternative physiologies—unlocking deeper insight and reusability across metabolic contexts."
+excerpt: "We present a novel framework to interpret and control the latent spaces of generative neural network models for kinetic metabolic modeling. By perturbing structured latent spaces learned via REKINDLE or RENAISSANCE, our method generates new dynamic models with targeted properties such as specific response times, regulatory bottlenecks, or alternative physiologies, unlocking deeper insight and reusability across metabolic contexts."
 collection: research_projects
 date: 2025-04-05
 paperurl: https://www.biorxiv.org/content/10.1101/2025.03.31.646317v1
@@ -10,7 +10,7 @@ related: false
 
 ## Problem Statement & Motivation
 
-Modeling dynamic metabolic behavior is central to biomedical and biotechnological advances—ranging from drug design to microbial consortia engineering. However, kinetic models are limited by incomplete biochemical data and parameterization difficulties. Recently, **generative machine learning** approaches like **REKINDLE** and **RENAISSANCE** have enabled rapid creation of dynamic models using trained neural network generators.
+Modeling dynamic metabolic behavior is central to biomedical and biotechnological advances, ranging from drug design to microbial consortia engineering. However, kinetic models are limited by incomplete biochemical data and parameterization difficulties. Recently, **generative machine learning GAN** approaches like **REKINDLE** and **RENAISSANCE** have enabled rapid creation of dynamic models using trained neural network generators.
 
 But one question remains: *how can we control and repurpose these trained models to explore entirely new physiological behaviors or guide biotechnological applications?*
 

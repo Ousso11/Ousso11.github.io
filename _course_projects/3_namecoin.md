@@ -1,6 +1,6 @@
 ---
 title: "NameCoin on Peerster: A Blockchain-Based Decentralized DNS Implementation"
-excerpt: "This project explores the design and implementation of a decentralized DNS system using blockchain and a gossip-based peer protocol. Built on top of Peerster, the system supports secure domain registration, updates, transfers, and resolution with robust anti-entropy synchronization and Proof-of-Work consensus. The project evaluates network resilience, consensus reliability, and mining efficiency."
+excerpt: "This project explores the design and implementation of a decentralized DNS system using blockchain and a gossip-based peer protocol. The system supports secure domain registration, updates, transfers, and resolution with robust anti-entropy synchronization and Proof-of-Work consensus. The project evaluates network resilience, consensus reliability, and mining efficiency."
 collection: course_projects
 share: false
 related: false
@@ -58,8 +58,3 @@ We performed **unit**, **integration**, and **performance tests**, including:
 - Current implementation trusts buyers in transfers—requiring seller acknowledgment would enhance security.
 - Consensus fork resolution could benefit from dynamic message sizing based on bandwidth.
 
-## Project Report
-
-- **Authors**: Oussama Gabouj, Rassene M’sadaa, Ahmed Abdelmalek  
-- **Course**: CS438 - Decentralized Systems  
-- **Institution**: EPFL  

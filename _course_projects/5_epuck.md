@@ -10,7 +10,7 @@ reporturl: "../../files/RobotiqueProject.pdf"
 
 ## Problem Statement & Motivation
 
-As part of the **Embedded Systems and Robotics** course at EPFL, this mini-project aimed to implement a real-world application using the **e-puck2 robot**. The challenge: create a robot capable of autonomously navigating a restaurant to collect orders from clients.
+As part of the **Embedded Systems and Robotics** course at EPFL, this project aimed to implement a real-world application using the **e-puck2 robot**. The challenge: create a robot capable of autonomously navigating a restaurant to collect orders from clients.
 
 The project was born from the idea of putting robotics at the service of people, particularly in the hospitality sector. The robot should be able to detect paths, avoid obstacles (like tables), and scan commands encoded in black lines of different widths on the ground.
 
@@ -64,5 +64,4 @@ The final application enables predictive analytics and restaurant workflow optim
 
 - Integration with **menu recommendation systems**
 - **Wireless charging** and **autonomous docking**
-- **Multilingual voice interface** for human interaction
 - More advanced **barcode or QR scanning**

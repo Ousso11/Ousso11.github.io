@@ -1,6 +1,6 @@
 ---
 title: "Learning-Based Multi-Robot Lane Navigation: Scalable Trajectory Prediction using Neural Networks"
-excerpt: "This project was conducted at [DISAL, EPFL](https://www.epfl.ch/labs/disal/). We explore trajectory generation for multi-robot navigation using neural networks. We propose a scalable alternative to Webots simulation by training models using reinforcement and imitation learning. The final approach produces accurate trajectories in a lane-based environment, balancing precision and efficiency in robotic control."
+excerpt: "This project was conducted at [DISAL, EPFL](https://www.epfl.ch/labs/disal/). We explore trajectory generation for multi-robot navigation using neural networks. We propose a scalable alternative to Webots simulation by training models using graph neural network, reinforcement and imitation learning. The final approach produces accurate trajectories in a lane-based environment, balancing precision and efficiency in robotic control."
 collection: research_projects
 share: false
 related: false
@@ -20,7 +20,7 @@ We investigated a range of **machine learning techniques** to model robot motion
 
 1. **Environment Setup**:
    - The navigation task was simulated in Webots.
-   - The environment includes a **cyclic lane path** with adjustable width and complexity (see Figure 1).
+   - The environment includes a **cyclic lane path** with adjustable width and complexity.
 
 2. **Trajectory Prediction**:
    - Input: initial robot position.
@@ -35,13 +35,9 @@ We investigated a range of **machine learning techniques** to model robot motion
 
 4. **Simulation Loop**:
    - The predicted movement is integrated step-by-step (xₜ → xₜ₊₁).
-   - The learned policy generalizes over multiple steps (see Figure 2).
+   - The learned policy generalizes over multiple steps.
 
 ## Evaluation & Results
-
-- The **green trajectory**: ground-truth expert path from Webots.
-- The **red trajectory**: neural network output.
-- Figure 3 shows close alignment between the model prediction and expert simulation.
 - The best-performing model used **imitation learning guided by reinforcement learning**, balancing precision with efficiency.
 
 ### Observations

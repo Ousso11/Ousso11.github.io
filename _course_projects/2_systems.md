@@ -1,6 +1,6 @@
 ---
 title: "Distributed Movie Recommendation Pipelines with Apache Spark"
-excerpt: "This project builds a full-scale movie recommendation system using Apache Spark, incorporating data analytics, keyword-based filtering, and collaborative filtering via ALS. Implemented on the MovieLens dataset, the system supports efficient data preprocessing, incremental rating updates, and personalized movie recommendations through LSH and predictive models."
+excerpt: "This project builds a full-scale movie recommendation system using Apache Spark, incorporating data analytics, keyword-based filtering. Implemented on the MovieLens dataset, the system supports efficient data preprocessing, incremental rating updates, and personalized movie recommendations through LSH and predictive models."
 collection: course_projects
 share: false
 related: false
@@ -49,9 +49,3 @@ The system supports both local development and distributed Spark execution on a 
 - Performance benchmarking on datasets of varying sizes (small to large).
 - Accurate top-N recommendations for users based on previous ratings.
 
-
-## Project Report
-
-- **Authors**: Oussama Gabouj
-- **Course**: CS-460 - Systems for data management and data science 
-- **Institution**: EPFL  

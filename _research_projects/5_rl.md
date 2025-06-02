@@ -10,7 +10,7 @@ reporturl: "../../files/Reinforcement_Learning_report.pdf"
 
 ## Problem Statement & Motivation
 
-Understanding biological motor control—like manipulating objects using muscle coordination—is a long-standing challenge in neuroscience and robotics. The control complexity increases significantly due to the high degrees of freedom and nonlinear interactions in the musculoskeletal system.
+Understanding biological motor control, like manipulating objects using muscle coordination, is a long-standing challenge in neuroscience and robotics. The control complexity increases significantly due to the high degrees of freedom and nonlinear interactions in the musculoskeletal system.
 
 This project tackles the **transition from novice to expert** policies in reinforcement learning (RL) through efficient strategies, focusing on the *Baoding balls* task from the NeurIPS **MyoChallenge**. Inspired by Chiappa et al.’s **Static-to-Dynamic Stabilization (SDS)** curriculum, we explore whether it's possible to transfer **motor synergies** learned by expert agents to novices using dimensionality reduction.
 
@@ -57,11 +57,5 @@ We also test projection/back-projection methods and latent space exploration for
 - PCA might not fully capture task-specific nuances—methods like **Independent Component Analysis (ICA)** could be more suitable.
 - Placement of dimensionality reduction layers in the network matters; future work should explore this further.
 
-
-## Project Report
-
-- **Authors**: Oussama Gabouj, Salim Boussofara, Ahmed Aziz Ben Haj Hmida
-- **Course**: EE-568 - Reinforcement learning
-- **Institution**: EPFL  
-- **PDF Poster**: [Download Full Report](../../files/Reinforcement_Learning_Poster.pdf)
+**PDF Poster**: [Download Full Report](../../files/Reinforcement_Learning_Poster.pdf)
 

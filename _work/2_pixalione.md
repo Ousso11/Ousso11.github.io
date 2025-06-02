@@ -17,8 +17,7 @@ Our goal was to create a predictive system that helps clients **understand and c
 - Built a robust **machine learning pipeline** to predict daily ad spend using past trends in **click-through rates, impressions, and user profiles**.
 - Enabled **per-client budget optimization**, integrating live forecasts into business logic.
 - Deployed a **Flask-based web API** to serve predictions and trigger **real-time notifications**.
-- Automated **email alerts** for clients when spending anomalies or thresholds are detected.
-- Integrated forecasting data with the production **PostgreSQL database** to update dashboards and planning tools.
+- **Daily Forecast Email**: Clients receive a daily email with the forecast of today’s spending, helping them stay informed and plan accordingly.
 
 ## 🚀 Technology Stack
 
@@ -38,6 +37,6 @@ Our goal was to create a predictive system that helps clients **understand and c
 
 ## Outcomes
 
-- Improved **forecast accuracy** for ad spend by over 20% compared to baseline methods.
-- Reduced **budget overshoot** incidents by enabling smarter daily spend thresholds.
+- Established **Forecast Accuracy Baseline**: Created the initial baseline for ad spend forecast accuracy, enabling future measurement and improvement efforts.
+
 - Enabled **hands-free campaign monitoring** for clients with low technical overhead.
