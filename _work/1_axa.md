@@ -1,5 +1,5 @@
 ---
-title: "AI Research Engineer — AXA Group Operations"
+title: "AI Research Intern — AXA Group Operations"
 collection: work_experience
 excerpt: "I led applied research and prototyping efforts in multimodal AI, focusing on cross-modal representation learning, graph-based embeddings, and neural search systems. I developed scalable pipelines to generate scene graphs from satellite imagery and knowledge graphs from textual data, and to align their graph embeddings in a shared representation space."
 location: Lausanne, Switzerland

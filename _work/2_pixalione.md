@@ -1,5 +1,5 @@
 ---
-title: "Machine Learning engineer - Pixalione"
+title: "Machine Learning Intern - Pixalione"
 excerpt: "Developed a machine learning pipeline to forecast daily ad spend on Google Ads based on client-specific campaign data. Deployed a web backend for dynamic budget strategy adjustment, automated alerts, and integration with Azure Cloud infrastructure."
 collection: work_experience
 share: false
