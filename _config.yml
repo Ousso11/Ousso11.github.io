@@ -11,8 +11,8 @@ locale                   : "en-US"
 site_theme               : "default"
 title                    : "Oussama Gabouj"
 title_separator          : "-"
-name                     : &name "Your Name"
-description              : &description "personal description"
+name                     : &name "Oussama Gabouj"
+description              : &description "Co-founder & CTO at Compresr (YC W26). EPFL MSc in Data Science. Research and engineering on efficient LLMs and context compression."
 url                      : "https://Ousso11.github.io" # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io" or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "Ousso11/Ousso11.github.io"
@@ -25,10 +25,10 @@ author:
   avatar           : "oussama.jpeg"
   name             : "Oussama Gabouj"
   pronouns         : # example: "she/her"  
-  bio: "Master student in Data Science | Minor in Cybersecurity @ EPFL"
+  bio: "Co-founder & CTO @ Compresr (YC W26) | Efficient LLMs & context compression | EPFL MSc Data Science"
   location         : "Lausanne, Switzerland"
-  employer         : "EPFL"
-  uri              : # URL
+  employer         : "Compresr Inc. (YC W26)"
+  uri              : "https://compresr.ai"
   email            : "oussama.gabouj@epfl.ch" 
 
   # Academic websites
@@ -226,9 +226,9 @@ collections:
     output: true
     permalink: /:collection/:path/
   
+  # Retained as source, not published.
   course_projects:
-    output: true
-    permalink: /:collection/:path/
+    output: false
 
   work:
     output: true

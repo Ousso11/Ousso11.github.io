@@ -1,12 +1,14 @@
 ---
 title: "GRAD: Generative Retrieval-Aligned Demonstration Sampler for Efficient Few-Shot Reasoning"
 collection: publications
-# category: manuscripts # conferences
-permalink: /publication/2025-10-01-grad
-excerpt: "We propose GRAD, a dynamic demonstration-based approach where an LLM model is trained to generate input-specific concise demonstrations. By tailoring demonstrations to each input, our method offers better contextual support than traditional RAG approaches."
-date: 2025-08-20
-venue: 'EMNLP 2025 (Findings)'
-paperurl: 'https://arxiv.org/abs/2510.01165'
+permalink: /publications/GRAD/
+redirect_from:
+  - /publication/2025-10-01-grad
+  - /publication/2025-10-01-grad/
+excerpt: "First author (equal contribution), published in Findings of EMNLP 2025 and presented in Suzhou. We propose GRAD, a dynamic demonstration-based approach where an LLM model is trained to generate input-specific concise demonstrations. By tailoring demonstrations to each input, our method offers better contextual support than traditional RAG approaches."
+date: 2025-11-05
+venue: 'Findings of EMNLP 2025'
+paperurl: 'https://aclanthology.org/2025.findings-emnlp.1047/'
 share: false
 related: false
 ---
@@ -27,12 +29,20 @@ Overall, this work introduces a scalable demonstration generator model presentin
 - **Cross-Model Transfer**: Smaller trained models can guide larger target models, reducing training costs while maintaining accuracy.
 - **Scalable Few-Shot Learning**: Introduces a practical framework for dynamic few-shot learning in resource-constrained settings.
 
+## Method Notes
+
+Behind the headline result, a few decisions mattered more than the rest:
+
+- **Reward design.** The reward combines answer log-probability, accuracy and a demonstration count, with an explicit cap so the model cannot game it by padding demonstrations.
+- **PPO vs GRPO.** We compared both and kept **GRPO** for training stability.
+- **Memory budget.** Training used **LoRA** to fit inside the memory we had available.
+- **GRADi.** An SFT warm-started variant of the same recipe.
+
 ## Publication Details
 
-- **Date**: August 20, 2025  
-- **Venue**: EMNLP 2025 (Findings)
-- **arXiv**: [arXiv:2510.01165 [cs.CL]](https://arxiv.org/abs/2510.01165)  
-- **PDF**: [Download Paper PDF](https://arxiv.org/pdf/2510.01165.pdf)
+- **Venue**: **Findings of EMNLP 2025** — presented in Suzhou, November 2025
+- **Anthology**: [2025.findings-emnlp.1047](https://aclanthology.org/2025.findings-emnlp.1047/)
+- **Preprint**: [arXiv:2510.01165 [cs.CL]](https://arxiv.org/abs/2510.01165)
 - **Code**: [GitHub Repository](https://github.com/charafkamel/GRAD-demonstration-sampler)
-- **Authors**: Oussama Gabouj, Kamel Charaf, Ivan Zakazov, Nicolas Baldwin, Robert West
+- **Authors**: **Oussama Gabouj\***, Kamel Charaf\*, Ivan Zakazov\*, Nicolas Baldwin, Robert West — \* equal contribution
 

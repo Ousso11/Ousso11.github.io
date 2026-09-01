@@ -13,19 +13,6 @@ We needed to **mine and transform** large text datasets into structured formats 
 
 However, **GPT-4's 2M TPM constraint** and high latency posed a scaling bottleneck.
 
-title: "Scaling Data Mining with API Efficiency Under TPM Limits"
-collection: journal
-excerpt: "Efficiently mining structured text or graphs using GPT-4 APIs while staying under 2M TPM."
-
-## Issue
-
-We needed to **mine and transform** large text datasets into structured formats like:
-
-- **Structured JSON from raw text**
-- **Graphs from code or document relationships**
-
-However, **GPT-4's 2M TPM constraint** and high latency posed a scaling bottleneck.
-
 ## Solution
 
 We implemented a **parallel, optimized API pipeline** using LangChain, with full token tracking and queue management:

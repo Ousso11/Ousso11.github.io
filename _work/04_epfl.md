@@ -1,7 +1,8 @@
 ---
 title: "Student Assistant — EPFL"
-collection: education
+collection: work
 excerpt: "During my studies, I served as a **teaching assistant** for multiple courses, assisting in lectures, labs, and tutorials"
+permalink: /work/3_epfl/
 location: Lausanne, Switzerland
 share: false
 related: false

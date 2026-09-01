@@ -1,12 +1,11 @@
 ---
 title: "GRAD: Generative Retrieval-Aligned Demonstration Sampler for Efficient Few-Shot Reasoning"
-collection: publications
-# category: manuscripts # conferences
-permalink: /publication/2025-10-01-grad
-excerpt: "We propose GRAD, a dynamic demonstration-based approach where an LLM model is trained to generate input-specific concise demonstrations. By tailoring demonstrations to each input, our method offers better contextual support than traditional RAG approaches."
-date: 2025-08-20
-venue: 'EMNLP 2025 (Findings)'
-paperurl: 'https://arxiv.org/abs/2510.01165'
+collection: research_projects
+permalink: /research_projects/grad/
+excerpt: "Conducted at EPFL dlab with Prof. Robert West; first author (equal contribution), published in Findings of EMNLP 2025. We propose GRAD, a dynamic demonstration-based approach where an LLM model is trained to generate input-specific concise demonstrations. By tailoring demonstrations to each input, our method offers better contextual support than traditional RAG approaches."
+date: 2025-11-05
+venue: 'Findings of EMNLP 2025'
+paperurl: 'https://aclanthology.org/2025.findings-emnlp.1047/'
 share: false
 related: false
 ---

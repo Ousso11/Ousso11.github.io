@@ -1,33 +1,18 @@
-# The following is the order of the links in the header of the website.
-#
-# Changing the order here will adjust the order and you can also add additional
-# links. Removing a link prevents it from showing in the header, but does not
-# prevent it from being included in the site.
-#
-# NOTE that only one of the CV options should be selected, the first is for the
-#      Markdown formatted page while the second is generated using JSON.
+# Header links, ordered by what a hiring reader looks for first.
+# Removing a link hides it from the header; it does not unpublish the section.
 
 main:
+  - title: "Experience"
+    url: /work/
+
   - title: "Publications"
     url: /publications/
 
-  - title: "Research projects"
-    url: /research_projects/    
+  - title: "Open Source"
+    url: /open_source/
 
-  - title: "Research and Debug Journal"
-    url: /journal/  
+  - title: "Research Projects"
+    url: /research_projects/
 
-  - title: "Course Projects"
-    url: /course_projects/    
-        
-  - title: "Work Experiences"
-    url: /work/
-    
-  # - title: "CV"
-  #   url: /cv/
-    
-  # - title: "CV"
-  #   url: /cv-json/
-    
-  # - title: "Guide"
-  #   url: /markdown/
+  - title: "Engineering & Research Journal"
+    url: /journal/

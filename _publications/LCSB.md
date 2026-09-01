@@ -1,14 +1,14 @@
 ---
 title: "Generative Approaches to Kinetic Parameter Inference in Metabolic Networks via Latent Space Exploration"
 collection: publications
-# category: manuscripts # conferences
-permalink: /publication/2025-04-05-latent-metabolic-generative-models
-excerpt: "We introduce a generative framework for constructing large-scale kinetic metabolic models through latent space exploration. By repurposing pretrained neural network generators across different physiological contexts, our method enables efficient and interpretable inference of kinetic parameters, facilitating targeted model design for diverse metabolic behaviors."
-date: 2025-04-05
-venue: 'bioRxiv'
-paperurl: 'https://www.biorxiv.org/content/10.1101/2025.03.31.646317v1'
-# slidesurl: ''
-# bibtexurl: 'https://www.biorxiv.org/content/10.1101/2025.03.31.646317v1.article-info'
+permalink: /publications/LCSB/
+redirect_from:
+  - /publication/2025-04-05-latent-metabolic-generative-models
+  - /publication/2025-04-05-latent-metabolic-generative-models/
+excerpt: "Co-author, published in Nature Communications. We introduce a generative framework for constructing large-scale kinetic metabolic models through latent space exploration. By repurposing pretrained neural network generators across different physiological contexts, our method enables efficient and interpretable inference of kinetic parameters, facilitating targeted model design for diverse metabolic behaviors."
+date: 2026-01-15
+venue: 'Nature Communications'
+paperurl: 'https://www.nature.com/articles/s41467-026-72184-3'
 share: false
 related: false
 ---
@@ -22,10 +22,14 @@ Generative machine learning methods that utilize neural networks to parameterize
 - **Cross-Physiology Repurposing**: Allows transfer from one strain or condition (e.g., wild-type) to another (e.g., recombinant or fast-growing).
 - **Scalable Parameter Inference**: Offers an interpretable and efficient alternative to Monte Carlo or ensemble methods.
 
+## My Contribution
+
+Generative-model work: using **GAN latent spaces** to infer kinetic parameters of metabolic networks, in place of expensive sampling-based estimation.
+
 ## Publication Details
 
-- **Date**: April 5, 2025  
-- **Preprint**: [bioRxiv - DOI: 10.1101/2025.03.31.646317](https://www.biorxiv.org/content/10.1101/2025.03.31.646317v2)  
-- **License**: CC-BY-NC-ND 4.0  
-- **PDF**: [Download Full Paper](https://www.biorxiv.org/content/10.1101/2025.03.31.646317v2.full.pdf)
+- **Venue**: **Nature Communications**, 2026
+- **Article**: [nature.com/articles/s41467-026-72184-3](https://www.nature.com/articles/s41467-026-72184-3)
+- **Preprint**: [bioRxiv — DOI: 10.1101/2025.03.31.646317](https://www.biorxiv.org/content/10.1101/2025.03.31.646317v2)
+- **Lab**: [LCSB, EPFL](https://www.epfl.ch/labs/lcsb/)
 
