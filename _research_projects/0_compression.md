@@ -44,7 +44,7 @@ That figure is why we throw out differences that look like wins but sit inside t
 
 ## Serving
 
-The evaluation work sits directly on top of the inference work — our compression models served under **vLLM on EKS**, autoscaled by a custom CloudWatch metric that cut GPU instance-hours **9–32%**. Cheap inference is what makes running 12 suites repeatedly affordable enough to be honest.
+The evaluation work sits directly on top of the inference work — our compression models served under **vLLM on EKS**, autoscaled by a custom CloudWatch metric that beat the AWS built-ins on GPU instance-hours. Cheap inference is what makes running 12 suites repeatedly affordable enough to be honest.
 
 ## Related
 

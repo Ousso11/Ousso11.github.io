@@ -17,14 +17,14 @@ I also keep an **[Engineering & Research Journal](/journal/)** — write-ups of 
 
 **Co-founder & CTO, [Compresr Inc.](https://compresr.ai)** — San Francisco / Lausanne | **Sep 2025 – Present**
 
-We spun out of EPFL's dlab, were taken into **Y Combinator W26**, and raised **$1.2M+**. I'm the infrastructure engineer on a four-person team, which in practice means:
+We spun out of EPFL's dlab and were taken into **Y Combinator W26**. I'm the infrastructure engineer on a four-person team, which in practice means:
 
 - **[Context Gateway](https://github.com/Compresr-ai/Context-Gateway)** — an open-source Go proxy (**637 ★**, Apache-2.0) that sits between a coding agent and its LLM and keeps the context window small. It summarises in a background worker and intercepts the agent's own compaction request, so compacting returns something that already exists instead of stalling the session. Works with Claude Code, Codex, Cursor, OpenCode and OpenClaw.
 - **The cloud platform** — a multi-tenant API with Postgres row-level security, Redis buffering and Stripe billing, plus an on-premise product for customers who can't send data out.
 - **GPU serving** — our compression models served under vLLM on EKS, autoscaled by a custom CloudWatch metric.
 - **The benchmark harness** — 12 long-context suites, plus a sandboxed setup for running coding agents under compression.
 
-One production integration cut a customer's inference cost **55% ($33K/yr)** and their latency **3×**, with answer quality slightly *up* afterwards.
+In production, compression has cut customer inference costs and latency substantially while leaving answer quality intact — measured against parity gates rather than asserted.
 
 ## 📄 Selected Publications
 
@@ -56,7 +56,7 @@ One production integration cut a customer's inference cost **55% ($33K/yr)** and
 ## 🏆 Honours & Awards
 
 - **Y Combinator W26** — selected for the Winter 2026 batch.
-- **$1.2M+ pre-seed** raised for Compresr as technical co-founder.
+- **Venture-backed pre-seed** raised for Compresr as technical co-founder.
 - **Summer in the Lab Scholarship**, DISAL, EPFL — a competitive fellowship funding a full-time summer of research (2023).
 
 ## 🛠️ Technical Skills

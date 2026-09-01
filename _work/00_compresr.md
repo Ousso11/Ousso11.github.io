@@ -2,7 +2,7 @@
 title: "Co-founder & CTO — Compresr Inc. (YC W26)"
 collection: work
 permalink: /work/compresr/
-excerpt: "I co-founded Compresr out of EPFL's dlab to build context-compression infrastructure for LLMs. We were taken into Y Combinator W26 and raised $1.2M+. I am the infrastructure engineer on a four-person team: the multi-tenant cloud platform, the on-premise product, an open-source Go proxy, the GPU serving layer, and the benchmark harness we make decisions with."
+excerpt: "I co-founded Compresr out of EPFL's dlab to build context-compression infrastructure for LLMs. We were taken into Y Combinator W26. I am the infrastructure engineer on a four-person team: the multi-tenant cloud platform, the on-premise product, an open-source Go proxy, the GPU serving layer, and the benchmark harness we make decisions with."
 location: San Francisco, USA / Lausanne, Switzerland
 share: false
 related: false
@@ -14,7 +14,7 @@ related: false
 
 Long context is expensive and, past a point, actively harmful — models degrade, agents stall on compaction, and bills scale with tokens nobody reads. **Compresr** builds compression infrastructure that sits between an application and its LLM: it decides what to keep, keeps it, and lets the rest be recovered on demand.
 
-The company spun out of **EPFL's [dlab](https://dlab.epfl.ch)**, was selected for **Y Combinator W26**, and raised **$1.2M+** pre-seed. I am the only infrastructure engineer on a four-person team.
+The company spun out of **EPFL's [dlab](https://dlab.epfl.ch)** and was selected for **Y Combinator W26**. I am the only infrastructure engineer on a four-person team.
 
 ## 🔧 What I Build
 
@@ -35,7 +35,7 @@ Multi-tenant API and billing: **135 HTTP endpoints across 24 routers**, **Postgr
 For customers who cannot send data out: three deployment channels from one image, Ed25519-JWT auth, HMAC-verified telemetry, a six-layer security gate, and cosign + SBOM + OpenVEX supply-chain attestation.
 
 ### GPU serving & infrastructure
-Our compression models served under **vLLM on EKS**, autoscaled by a **custom CloudWatch EMF metric** that cut GPU instance-hours **9–32%** against the AWS built-ins. **14 reusable Terraform modules** and 7 root stacks underneath.
+Our compression models served under **vLLM on EKS**, autoscaled by a **custom CloudWatch EMF metric** that meaningfully outperformed the AWS built-ins on GPU instance-hours. **14 reusable Terraform modules** and 7 root stacks underneath.
 
 ### Client SDKs
 Matching **Python (`compresr` on PyPI)** and **TypeScript (`@compresr/sdk` on npm)** clients with sync, async, batch and streaming calls. Dual ESM/CJS builds and every peer dependency optional, so installing the SDK never drags a user's pinned `openai` or `anthropic` version along with it. Five integrations — LangChain, LangGraph, LlamaIndex, a LiteLLM guardrail, a Hermes plugin — over a shared core, with **1,000+ tests**, published from CI by tag rather than from a laptop.
@@ -50,7 +50,7 @@ We **measured our evaluation noise** rather than assuming it: **±0.07 per-sampl
 
 ## 🚀 Production Impact
 
-One production integration cut a customer's inference cost **55% ($33K/yr)** and their latency **3×** (1.75s → 0.57s), and the judge score came out slightly *higher* afterwards than before (6.33 → 6.81), staged behind parity gates.
+Production integrations have delivered substantial inference-cost and latency reductions without a quality regression — in at least one case the LLM-judge score came out marginally *higher* after compression than before. Every rollout is staged behind parity gates, so a quality drop blocks the change rather than being discovered later.
 
 ## 🔐 Beyond Code
 
