@@ -26,7 +26,7 @@ A proxy that sits between a coding agent and its LLM and keeps the context windo
 - **Compression is reversible.** Tool outputs are swapped for references, and a phantom `expand_context` tool is slipped into the request, so the model can pull the original back when it needs it — without the host agent ever knowing the tool was added.
 - **Eight LLM backends** behind one adapter interface, including re-signing SigV4 for Bedrock after the request body has been rewritten.
 - Works with **Claude Code, Codex, Cursor, OpenCode and OpenClaw**; I wrote the OpenClaw plugin.
-- **40K+ lines of Go with 1K+ tests**. Ships as a single cgo-free binary with the React dashboard embedded, released for five platforms across 12 versions.
+- **47K lines of Go with 1K+ tests**. Ships as a single cgo-free binary with the React dashboard embedded, released for five platforms across 12 versions.
 
 ### Cloud platform
 Multi-tenant API and billing: **135 HTTP endpoints across 24 routers**, **Postgres row-level security (74 policies)** for tenant isolation, Redis write-behind buffering, Stripe billing, SSE streaming. **2,411 tests.**
