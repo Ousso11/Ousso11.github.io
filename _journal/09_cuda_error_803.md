@@ -1,6 +1,7 @@
 ---
 title: "CUDA Error 803 on the Newer Driver"
 collection: journal
+order: 29
 permalink: /journal/cuda-error-803-compat-lib/
 excerpt: "An inference engine restart-looped on exactly the hosts with the most up-to-date drivers. The vLLM base image bundles a forward-compatibility libcuda ahead of the host driver on the loader path, and the loader picks the older one."
 ---

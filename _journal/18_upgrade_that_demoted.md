@@ -1,6 +1,7 @@
 ---
 title: "The Enterprise Upgrade That Demoted Our Biggest Customers"
 collection: journal
+order: 38
 permalink: /journal/upgrade-that-demoted/
 excerpt: "Approving an enterprise key wrote tier3 unconditionally. For a customer already on tier4 or tier5, the upgrade was a downgrade — a rate-limit cut delivered by the function whose name promised the opposite."
 ---

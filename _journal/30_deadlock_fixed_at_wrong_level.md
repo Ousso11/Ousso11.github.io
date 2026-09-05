@@ -1,6 +1,7 @@
 ---
 title: "One Bad Config Patch Froze the Proxy, Forever"
 collection: journal
+order: 12
 permalink: /journal/split-the-locked-part-into-its-own-function/
 excerpt: "A malformed config patch froze the entire proxy, permanently, because every request path calls Current() under the same lock. The first fix removed the self-deadlock and introduced a leaked write lock on both error paths — the common paths for a bad patch."
 ---
@@ -9,15 +10,23 @@ excerpt: "A malformed config patch froze the entire proxy, permanently, because 
 
 ## Issue
 
-A single invalid config patch froze the whole proxy. Every request reads the config under the same lock the reload was holding, so nothing recovered without a restart.
+A single invalid `PATCH /api/config` froze the whole Go proxy. Every request reads config through `Current()` under the same `sync.RWMutex`, so nothing recovered without a hard restart.
 
 ## Root Cause
 
-The reload routine held the write lock while notifying subscribers, one of which read the config back under the read lock — a self-deadlock on Go's non-reentrant `RWMutex`. The first fix unlocked manually before the callback loop, which fixed reentrancy but leaked the lock on both early-return error paths — exactly the paths a bad patch takes.
+`Reloader.Update` held `mu.Lock()` while calling subscriber callbacks, one of which called `Current()` — which takes `mu.RLock()`. `RWMutex` isn't reentrant. The first fix removed the deadlock by unlocking manually before the callback loop, but leaked the lock on both early-return error paths: validation failure and persist failure — exactly the paths a bad patch takes.
 
 ## Solution
 
-Split the function: a private function owns the whole critical section with one exit, `defer Unlock`, guaranteed on every return. It returns the new state and subscriber list; only the caller, unlocked, runs the callbacks.
+```go
+func (r *Reloader) applyUpdateLocked(patch Patch) (cfg Config, subs []Sub, err error) {
+    r.mu.Lock()
+    defer r.mu.Unlock()   // the only exit, on every path
+    ...
+    return cfg, subs, err
+}
+// caller runs subs' callbacks only after this returns, unlocked
+```
 
 ## 💡 Takeaway
 

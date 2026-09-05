@@ -1,6 +1,7 @@
 ---
 title: "A Mutex That Wasn't Enough: Racing on a Global Logger"
 collection: journal
+order: 34
 permalink: /journal/sync-once-global-logger/
 excerpt: "Go's race detector kept failing CI on the global logger even after the write was put under a mutex. A mutex only protects the accesses that take it — and every log.Info() call in the codebase read the same variable without one."
 ---

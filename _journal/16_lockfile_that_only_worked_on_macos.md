@@ -1,6 +1,7 @@
 ---
 title: "A Lockfile That Only Worked on macOS"
 collection: journal
+order: 36
 permalink: /journal/npm-lockfile-platform-optional-deps/
 excerpt: "CI started failing on npm ci after a routine lockfile regeneration. Regenerating on macOS silently drops Linux-only optional dependencies, and re-running npm install on macOS will never add them back."
 ---

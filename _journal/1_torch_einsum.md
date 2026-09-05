@@ -1,6 +1,7 @@
 ---
 title: "Speeding Up Graph Similarity Matching with Efficient Tensor Ops"
 collection: journal
+order: 39
 share: false
 related: false
 excerpt: "The graph similarity algorithm for matching image-text graph pairs was too slow, particularly in the pairwise comparison step"

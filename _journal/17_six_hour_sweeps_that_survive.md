@@ -1,6 +1,7 @@
 ---
 title: "Six-Hour Benchmark Sweeps That Survive a Crash"
 collection: journal
+order: 37
 permalink: /journal/atomic-resume-benchmark-sweeps/
 excerpt: "A multi-config benchmark sweep runs for hours and dies for reasons that have nothing to do with the experiment. Writing results atomically per question — rather than per run — turned three 20-minute stalls from lost days into lost minutes."
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Last Year Was Smaller Than Last 6 Months"
 collection: journal
+order: 23
 permalink: /journal/postgrest-silent-row-cap/
 excerpt: "A usage dashboard reported less traffic for a longer period than a shorter one. The cause was a silent 1000-row cap in PostgREST combined with ASC ordering, which dropped exactly the newest days — and it was one query in a class of fifteen."
 ---

@@ -1,6 +1,7 @@
 ---
 title: "A Revoked Key That Kept Working for Three Hours"
 collection: journal
+order: 30
 permalink: /journal/revoked-key-cache-window/
 excerpt: "On-premise deployments cached a successful key validation for three hours, so revoking a leaked key did nothing for three hours. The same TTL was also the offline tolerance window — so lowering it would have broken the product's core promise."
 ---

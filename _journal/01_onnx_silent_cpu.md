@@ -1,6 +1,7 @@
 ---
 title: "The GPU That Said Yes and Ran on CPU"
 collection: journal
+order: 21
 permalink: /journal/onnx-silent-cpu-fallback/
 excerpt: "onnxruntime reported CUDAExecutionProvider as available while every real session ran on CPU, because libcudnn.so.9 could not be loaded. Nothing raised. The chunker just got slow, and stayed slow in production for weeks."
 ---

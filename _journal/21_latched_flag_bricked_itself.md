@@ -1,6 +1,7 @@
 ---
 title: "The Server That Restarting Couldn't Fix"
 collection: journal
+order: 8
 permalink: /journal/derived-state-not-latched-flags/
 excerpt: "An on-premise instance whose telemetry uploads kept failing began returning 503 and never stopped. Restarting did not help; shipping a new image did not help. The health anchor was a latched flag, and the only code that cleared it could no longer run."
 ---
@@ -9,15 +10,21 @@ excerpt: "An on-premise instance whose telemetry uploads kept failing began retu
 
 ## Issue
 
-An on-premise instance stopped serving entirely. Restarting didn't help. A fresh image didn't help either. It had bricked itself with no recovery path short of hand-editing state on disk.
+An on-premise instance stopped serving entirely, returning 503 on every request. Restarting didn't help. A fresh image didn't help either. It had bricked itself with no recovery path short of hand-editing SQLite state on the volume.
 
 ## Root Cause
 
-The health gate was a flag, set when the event queue fell too far behind and cleared only by the code path that drains it successfully. But failed events past a retry cap were *deleted*, not delivered — so a queue that emptied by deletion never ran the clearing path, and the flag stayed set forever, reloaded from disk on every restart. Two more bugs compounded it: every failure was treated as retryable, so one permanently-rejected batch blocked the whole queue; and failures had no jitter, so the whole fleet retried in lockstep.
+The health gate was a boolean, persisted to disk, set once the event queue fell behind and cleared only by the code path that drains it *successfully*. Events past `MAX_RETRY_COUNT` were deleted instead of delivered — so a queue emptied by deletion never ran the clearing path, and the flag stayed set through every restart.
 
 ## Solution
 
-Derive the health gate from the queue itself — the age of the oldest unreported item — instead of a flag nothing can reliably clear. Classify failures into retryable vs. terminal, quarantine what the server keeps rejecting, and add jitter to retries.
+```python
+# before: gate = self._backlog_flag           # latched, can stick
+# after:
+gate = (time.time() - self.oldest_unreported()) > GRACE_SECONDS
+```
+
+Derive the gate from the queue's own oldest-unreported timestamp instead of a flag. Add jitter to retries and quarantine (not delete) events the server keeps rejecting.
 
 ## 💡 Takeaway
 

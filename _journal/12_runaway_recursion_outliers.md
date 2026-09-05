@@ -1,6 +1,7 @@
 ---
 title: "5% of Rows Cost $10–60 Each: An Unset Recursion Limit"
 collection: journal
+order: 32
 permalink: /journal/langgraph-recursion-outliers/
 excerpt: "A benchmark's cost-per-question quadrupled on one config. The agent never wired its max_steps into LangGraph, so it ran at the default recursion_limit=25 — and on hard questions kept looping with growing context, producing rows with 5–20M input tokens."
 ---

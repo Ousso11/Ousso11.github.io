@@ -1,6 +1,7 @@
 ---
 title: "One Bad Reply Poisoned the Conversation, Forever"
 collection: journal
+order: 5
 permalink: /journal/fixing-the-writer-doesnt-unpoison-old-data/
 excerpt: "An SSE resynthesis path emitted a whole thinking block without any of the delta events a spec-compliant client uses to build it. Clients reconstructed an empty block with a valid signature, saved it to disk, and every future replay of that conversation was rejected forever."
 ---

@@ -1,6 +1,7 @@
 ---
 title: "A 47-Second Reaction That Never Happened"
 collection: journal
+order: 26
 permalink: /journal/lag-must-be-a-transition/
 excerpt: "Two autoscaling configurations were credited with fast reactions to a traffic spike they had scaled up for minutes before the spike arrived. Fixing the measurement also meant admitting one number was 46s ±466s — useless precision the old output printed as a clean 47."
 ---

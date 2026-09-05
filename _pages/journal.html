@@ -5,6 +5,7 @@ permalink: /journal/
 author_profile: true
 ---
 
-{% for post in site.journal%}
+{% assign sorted_journal = site.journal | sort: "order" %}
+{% for post in sorted_journal %}
   {% include archive-single.html %}
 {% endfor %}

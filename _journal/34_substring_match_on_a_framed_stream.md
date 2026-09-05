@@ -1,6 +1,7 @@
 ---
 title: "The Detector That Fired on Talk and Missed the Real Thing"
 collection: journal
+order: 17
 permalink: /journal/substring-match-on-a-framed-protocol/
 excerpt: "Detecting a specific kind of tool call in a streaming response with a raw substring search caused duplicate upstream billing whenever the model merely mentioned the tool's name in prose, and missed real calls whose name was split across a chunk boundary."
 ---
@@ -9,15 +10,15 @@ excerpt: "Detecting a specific kind of tool call in a streaming response with a 
 
 ## Issue
 
-A detector watching streamed responses for a specific tool call was both too eager and not eager enough. Some requests triggered a duplicate upstream call for no reason; others let the exact pattern it was built for slip through.
+A detector watching streamed SSE responses for a specific tool call — `bytes.Contains(chunk, []byte(toolName))` — was both too eager and not eager enough. Some requests triggered a duplicate upstream call for no reason; real calls slipped through undetected.
 
 ## Root Cause
 
-The detector was a raw substring search over each chunk's bytes. The model *talking about* a tool matched just as well as an actual call, and a tool name split across a chunk boundary matched neither chunk at all.
+The model *saying* "I'll use Read next" in a text delta matched the same substring check as an actual `content_block_start` with `type: "tool_use"`. And a tool name split across two `resp.Body.Read` chunk boundaries matched neither chunk at all — the detector never saw it whole.
 
 ## Solution
 
-Parse the buffered stream events structurally and detect the real protocol shape for each provider format. The substring check survives only as a cheap pre-filter before the real parse — never the decision.
+Parse the buffered SSE events structurally: match on `content_block.type == "tool_use"` (Anthropic) or `choices[].delta.tool_calls[]` (OpenAI-shaped), never on raw bytes. The substring check survives only as a cheap pre-filter before the real parse.
 
 ## 💡 Takeaway
 

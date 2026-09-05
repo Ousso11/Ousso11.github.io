@@ -1,6 +1,7 @@
 ---
 title: "Resolving OOM in PPO/GRPO with Large Models"
 collection: journal
+order: 41
 excerpt: "PPO and GRPO training with models >7B caused OOM errors on A100 GPUs due to multiple full model replicas. This post details optimization strategies to fix it."
 
 ---

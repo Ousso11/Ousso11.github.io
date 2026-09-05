@@ -1,6 +1,7 @@
 ---
 title: "A Compression Ratio of Exactly 1.000×"
 collection: journal
+order: 24
 permalink: /journal/json-shaped-input-no-op/
 excerpt: "Every compress() call in the agent middleware returned its input unchanged — ratio 1.000× — while genuinely reaching the server and returning 200. The compressor no-ops on JSON-shaped input, and the search tool was handing it raw JSON."
 ---

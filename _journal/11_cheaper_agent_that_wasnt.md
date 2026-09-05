@@ -1,6 +1,7 @@
 ---
 title: "The Cheaper Agent That Wasn't: Mispricing Prompt-Cache Tokens"
 collection: journal
+order: 31
 permalink: /journal/cache-token-mispricing/
 excerpt: "A benchmark's headline finding — one agent dramatically cheaper than another — did not survive correct accounting. Cache-read tokens were priced at zero and cache-creation tokens at 1.0× instead of 1.25×, understating costs by up to 47%."
 ---

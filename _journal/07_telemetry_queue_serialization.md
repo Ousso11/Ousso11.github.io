@@ -1,6 +1,7 @@
 ---
 title: "32.8 ms of Database Work on Every Compression Request"
 collection: journal
+order: 27
 permalink: /journal/telemetry-queue-serialization/
 excerpt: "Telemetry was pinned to one core with writes behind a mutex. Three causes, measured on 10k queued events: a gate doing a full table scan under the store lock, one shared connection serializing readers behind writers, and a worker cap hiding a crash-recovery bug."
 ---

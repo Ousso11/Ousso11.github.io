@@ -1,6 +1,7 @@
 ---
 title: "The GPU Node That Nothing Could Remove"
 collection: journal
+order: 28
 permalink: /journal/stranded-burst-gpu-node/
 excerpt: "A rollout surge pod landed on an on-demand GPU node and stayed pinned there for days at 0% utilisation, while reserved capacity sat idle. Three separate mechanisms — KEDA, Karpenter consolidation and the Kubernetes scheduler — each independently, correctly, refused to clean it up."
 ---

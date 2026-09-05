@@ -1,6 +1,7 @@
 ---
 title: "max_tokens=20 Produced 200 Tokens — Only When Tools Were Attached"
 collection: journal
+order: 22
 permalink: /journal/bind-tools-drops-kwargs/
 excerpt: "A per-call max_tokens was honoured on tool-free calls and silently ignored the moment a tool was attached. LangChain's bind_tools() strips the kwargs from a prior chat.bind(), so the value never reached the wire."
 ---

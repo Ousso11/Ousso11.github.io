@@ -1,6 +1,7 @@
 ---
 title: "Scaling Data Mining with API Efficiency Under TPM Limits"
 collection: journal
+order: 43
 excerpt: "Efficiently mining structured text or graphs using GPT-4 APIs while staying under 2M TPM."
 ---
 

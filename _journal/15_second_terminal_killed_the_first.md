@@ -1,6 +1,7 @@
 ---
 title: "Starting a Second Agent Killed the First One"
 collection: journal
+order: 35
 permalink: /journal/stale-lock-file-pid-check/
 excerpt: "Opening a coding agent in a second terminal caused the session in the first terminal to exit. Our launcher deleted every IDE lock file on startup — including the ones belonging to running sessions."
 ---

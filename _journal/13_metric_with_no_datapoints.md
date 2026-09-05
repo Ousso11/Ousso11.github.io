@@ -1,6 +1,7 @@
 ---
 title: "Ten Days of a Metric Nobody Was Writing"
 collection: journal
+order: 33
 permalink: /journal/cloudwatch-iam-silent-denial/
 excerpt: "A CloudWatch observability addon reported healthy while its node CPU metric had zero datapoints for ten days. The node IAM roles lacked PutMetricData, so every publish was denied silently — and a compliance control failed downstream because of it."
 ---

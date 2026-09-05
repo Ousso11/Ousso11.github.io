@@ -1,6 +1,7 @@
 ---
 title: "We Set a Timeout. The Request Hung Forever Anyway."
 collection: journal
+order: 13
 permalink: /journal/socket-timeout-vs-wall-clock-deadline/
 excerpt: "A hot-path call configured with a timeout could hang indefinitely. A server dribbling one byte before each read-timeout window resets the clock every time — the timeout never fires, because it was never bounding the thing that needed bounding."
 ---

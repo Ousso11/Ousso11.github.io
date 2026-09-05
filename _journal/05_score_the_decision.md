@@ -1,6 +1,7 @@
 ---
 title: "The Autoscaling Study That Crowned the Wrong Winner"
 collection: journal
+order: 25
 permalink: /journal/score-the-decision-not-the-launch/
 excerpt: "A GPU autoscaling experiment ranked a policy that refused to scale as second-best overall. Four scoring bugs — the headline one being that we measured instance availability instead of the scaling decision, inflating a 33× gap into 7×."
 ---
