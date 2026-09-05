@@ -5,6 +5,8 @@ permalink: /journal/iter-text-is-not-iter-lines/
 excerpt: "A server-sent-events parser iterated decoded text chunks instead of lines, so a data frame split across two chunks was never recognised. Tests passed because a whole frame happened to land in one chunk every time — production traffic is not so accommodating."
 ---
 
+**The trick:** on a line-oriented streaming protocol, iterate lines, not arbitrary text chunks — and cap how much an unterminated line can buffer, or a broken server can hang you open-ended in the other direction.
+
 ## Issue
 
 A streaming call returned HTTP 200 and yielded nothing. No exception, no partial output — the stream simply produced zero events.

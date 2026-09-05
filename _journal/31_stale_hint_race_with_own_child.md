@@ -5,6 +5,8 @@ permalink: /journal/fix-reentered-by-your-own-subprocess/
 excerpt: "Deleting a stale routing hint at launch fixed one bug and created another: the launcher re-execs itself as a daemon, so the child ran the same cleanup and deleted the hint the parent had just written. If a process re-execs itself, every startup side effect runs twice."
 ---
 
+**The trick:** if a process re-execs itself, every "run once at startup" side effect runs twice, racing a child against its own parent. And explicit configuration should always outrank inferred configuration, no matter how reliable the inference has been.
+
 ## Issue
 
 A routing hint file, used to remember which upstream a coding agent should talk to, could go stale if the process was killed with `SIGKILL`: the file survived on disk and a fresh launch inherited the wrong upstream. The fix was to delete the hint unconditionally at the top of the launch path.

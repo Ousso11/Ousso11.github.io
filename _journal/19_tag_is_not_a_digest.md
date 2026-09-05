@@ -5,6 +5,8 @@ permalink: /journal/image-tag-is-not-an-identity/
 excerpt: "The Deployment spec showed exactly the image we intended. The pods had been serving an 18-hour-old build whose digest had already been deleted from the registry. A tag is a name; with imagePullPolicy IfNotPresent it is also a cache key."
 ---
 
+**The trick:** pin deployments by content digest, never by a mutable tag — with `imagePullPolicy: IfNotPresent`, a tag is also a cache key, so a node can keep serving bytes the registry no longer has.
+
 ## Issue
 
 An inference deployment was behaving like an older build. `kubectl get deploy -o yaml` showed exactly the image we intended to be running. Every part of the desired state was correct.

@@ -5,6 +5,8 @@ permalink: /journal/fixing-the-writer-doesnt-unpoison-old-data/
 excerpt: "An SSE resynthesis path emitted a whole thinking block without any of the delta events a spec-compliant client uses to build it. Clients reconstructed an empty block with a valid signature, saved it to disk, and every future replay of that conversation was rejected forever."
 ---
 
+**The trick:** fixing a buggy writer doesn't repair data it already wrote. Anything with durable derived state needs a read-side repair pass too — proven, by test, to be a byte-identical no-op on input that was already clean.
+
 ## Issue
 
 An agent's benchmark pass rate dropped by nearly a quarter, and the affected sessions did not recover. Every retry, every restart, every future request against that exact conversation returned the same rejection: *"each thinking block must contain thinking."* Permanently.

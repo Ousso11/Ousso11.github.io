@@ -5,6 +5,8 @@ permalink: /journal/package-data-globs-fail-open/
 excerpt: "Consumers running a type checker against a fully-annotated SDK got 'missing library stubs or py.typed marker'. The manifest had declared the marker file since the very first release. The file itself did not exist, and the packaging tool never once complained."
 ---
 
+**The trick:** verify what you actually shipped by inspecting the built artifact, never by re-reading the manifest that was supposed to produce it. A package-data glob that matches nothing never warns you.
+
 ## Issue
 
 Consumers running a type checker against our SDK saw the standard warning for an untyped package: missing stubs, missing marker file. The package was, in fact, fully annotated throughout. Something about how it was built was telling every downstream type checker otherwise.

@@ -5,6 +5,8 @@ permalink: /journal/ab-comparators-must-intersect-sample-ids/
 excerpt: "A published cost-and-accuracy comparison had to be retracted and restated on a smaller n. A third-party search API ran out of quota mid-sweep, and the two arms being compared died at different points in their run — so neither the sample set nor the count of dropped questions matched."
 ---
 
+**The trick:** before comparing two runs of anything, intersect their completed-item IDs. An equal sample count is not proof of an equal sample set.
+
 ## Issue
 
 A published head-to-head comparison reported one configuration beating another on both accuracy and cost, at a stated sample size of 200 questions each. Days later it had to be retracted and restated at a smaller, different sample size, with a materially smaller accuracy gap.

@@ -5,6 +5,8 @@ permalink: /journal/clamping-is-where-money-goes-to-die/
 excerpt: "Wallets in production showed the impossible triple: deposited $0, balance $0, spent $10.53 — and kept serving. A clamp in the deduction routine absorbed every overshoot, and a write-behind cache turned the resulting lie into a renewable resource."
 ---
 
+**The trick:** never let an operation that can't fully succeed report success. Return what was actually applied versus what was rejected — especially anywhere a clamp (`GREATEST`, `LEAST`, `min`, `max`) can silently absorb an overshoot.
+
 ## Issue
 
 Production wallets were showing an impossible triple: **deposited $0, balance $0, spent $10.53** — and the accounts kept serving requests, indefinitely.

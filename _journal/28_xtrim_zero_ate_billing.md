@@ -5,6 +5,8 @@ permalink: /journal/empty-is-not-the-same-as-failed/
 excerpt: "Usage events drained from a Redis Stream into the billing table. A helper returned an empty list on any exception, and the caller read emptiness as permission to XTRIM the stream to zero. Dashboards and invoices were quietly low, with no error anywhere."
 ---
 
+**The trick:** trim a durable queue to what's been acknowledged (`MINID`), never to a fixed count (`MAXLEN`) — and never let "I read nothing" become indistinguishable from "there was nothing to read."
+
 ## Issue
 
 Nothing. That is the story.

@@ -5,6 +5,8 @@ permalink: /journal/bound-cumulative-backoff-not-each-sleep/
 excerpt: "On-premise customers saw 40-60% request failure during bursts. The local stress harness showed none of it, because it never generated enough concurrent load to trigger the exact queueing signal that real traffic hit constantly."
 ---
 
+**The trick:** bound the cumulative backoff across every retry attempt, not just each individual sleep. A server-supplied wait hint is attacker- or bug-controlled input, and it needs a hard ceiling.
+
 ## Issue
 
 Deployments handling real burst traffic saw 40 to 60 percent of requests fail outright. A local load-testing harness, run before every release, showed nothing resembling this. The two environments disagreed completely about whether there was a problem.

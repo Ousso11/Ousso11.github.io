@@ -5,6 +5,8 @@ permalink: /journal/partial-unique-index-and-on-conflict/
 excerpt: "Every insert failed with 'no unique or exclusion constraint matching the ON CONFLICT specification' — against a column that demonstrably had a unique index on it. ON CONFLICT does arbiter inference, and a partial index only qualifies if the statement's own predicate implies the index's."
 ---
 
+**The trick:** `ON CONFLICT` performs arbiter inference, not an index lookup. A partial unique index only works with an upsert that can restate its `WHERE` clause — most query builders and REST layers can't, so they need a total index instead.
+
 ## Issue
 
 Right after shipping event-id deduplication for the billing pipeline, the background flush began quarantining every row. Postgres was returning:

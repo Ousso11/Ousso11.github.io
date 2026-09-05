@@ -5,6 +5,8 @@ permalink: /journal/method-override-with-a-different-signature/
 excerpt: "An async client call raised TypeError about unexpected arguments, only on the async path. A subclass had defined a method with the exact same name as a base-class transport method but a completely different signature, and a type: ignore comment was sitting right on top of it."
 ---
 
+**The trick:** never let a subclass method share a name with a base-class method it isn't meant to override — and never suppress a type checker's override-incompatibility warning without reading what it's telling you first.
+
 ## Issue
 
 An async client call failed with a `TypeError` about unexpected arguments. The equivalent synchronous call worked perfectly. Nothing in the immediate call site looked wrong.

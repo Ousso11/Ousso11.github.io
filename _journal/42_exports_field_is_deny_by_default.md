@@ -5,6 +5,8 @@ permalink: /journal/npm-exports-is-deny-by-default/
 excerpt: "A named export from the SDK's package root resolved to undefined. Importing it directly from its own subpath threw a hard resolution error. The compiled file was sitting right there in the published tarball the whole time."
 ---
 
+**The trick:** a package's `exports` map is a deny list — presence in the published tarball grants nothing. Install the built tarball fresh in a scratch project and import every path you claim to support.
+
 ## Issue
 
 A named export from the SDK's package root resolved to `undefined` at runtime — no error, just a missing value where a class should have been. Trying to import the same thing from its own dedicated subpath instead produced a hard module-resolution error, naming the exact subpath as unreachable.

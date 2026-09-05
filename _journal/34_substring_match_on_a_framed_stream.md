@@ -5,6 +5,8 @@ permalink: /journal/substring-match-on-a-framed-protocol/
 excerpt: "Detecting a specific kind of tool call in a streaming response with a raw substring search caused duplicate upstream billing whenever the model merely mentioned the tool's name in prose, and missed real calls whose name was split across a chunk boundary."
 ---
 
+**The trick:** never use substring matching to detect structure in a framed protocol. Parse the frames properly, and keep any substring check as a cheap pre-filter only — never as the decision itself.
+
 ## Issue
 
 A detection routine watching a streaming response for a specific pattern of tool call was both too eager and not eager enough. Some requests triggered a full duplicate upstream call for no visible reason. Separately, the thing the detector existed to catch sometimes slipped through undetected.

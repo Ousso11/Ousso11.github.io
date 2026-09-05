@@ -5,6 +5,8 @@ permalink: /journal/a-flag-that-never-varies-is-a-lie/
 excerpt: "Time-to-first-token equalled full generation time for every streaming request, for months. A fast pass-through path existed and was correctly written — gated on a flag that had been set unconditionally on every request, so the branch was unreachable code nobody noticed."
 ---
 
+**The trick:** trace a flag to everywhere it's set, not just where it's read. A boolean that never varies is worse than no boolean, because it reads as a decision that isn't actually being made.
+
 ## Issue
 
 Every streaming request behaved as if it were fully buffered: the client received nothing until the entire response had been generated, and time-to-first-token equalled total generation time. There was, in the same code, a direct pass-through path clearly designed to stream chunks to the client as they arrived. It was never running.

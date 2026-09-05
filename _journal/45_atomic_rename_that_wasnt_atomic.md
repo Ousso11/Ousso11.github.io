@@ -5,6 +5,8 @@ permalink: /journal/temp-file-rename-across-filesystems/
 excerpt: "A config persistence routine used the standard temp-file-then-rename pattern for an atomic write. On Linux, where the system temp directory is routinely a different filesystem from the target, the rename fails outright — and the failure path was the one that caused the deadlock in an earlier story."
 ---
 
+**The trick:** a rename is only atomic within one filesystem. Write your temp file into the same directory as the final target, never into the system default temp directory.
+
 ## Issue
 
 A configuration persistence routine used the standard pattern for a safe, atomic write: create a temporary file, write the new contents, then rename it into place. Rename is atomic on a POSIX filesystem, so a crash mid-write can never leave a half-written config behind. On Linux, this "atomic" write was in fact the routine's most reliable way to fail.

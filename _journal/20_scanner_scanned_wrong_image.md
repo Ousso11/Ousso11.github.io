@@ -5,6 +5,8 @@ permalink: /journal/gate-that-measured-the-wrong-artifact/
 excerpt: "A container-configuration gate failed images that passed when scanned by tag, and passed images it had never looked at. It took five attempts, each of which fixed something real and left the gate still capable of reporting on an artefact nobody asked about."
 ---
 
+**The trick:** derive the identifier any security gate measures from the artifact itself and never default it — and classify a tool crash as a crash, never as a finding against the thing it failed to scan.
+
 ## Issue
 
 Our container-configuration scanner reported `FAIL` on images that passed cleanly when the same image was scanned by tag rather than by digest. Reports from that day carry a configuration section describing a **different image** from the other four sections of the same report.

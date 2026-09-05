@@ -5,6 +5,8 @@ permalink: /journal/pipefail-grep-q-sigpipe/
 excerpt: "Three consecutive builds aborted claiming a file was missing from an archive that demonstrably contained it. The unit test passed, because the fixture archive had four entries and the real one had four thousand. grep -q exits on match and SIGPIPEs the writer."
 ---
 
+**The trick:** never pipe into an early-exiting reader — `grep -q`, `head`, a loop with `break` — under `set -o pipefail`. Capture the output into a variable first, then match against that.
+
 ## Issue
 
 Three consecutive builds aborted with `source package is missing <path>` — against a package that visibly contained the file. Unzipping it by hand and looking took about ten seconds.

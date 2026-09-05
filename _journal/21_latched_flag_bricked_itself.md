@@ -5,6 +5,8 @@ permalink: /journal/derived-state-not-latched-flags/
 excerpt: "An on-premise instance whose telemetry uploads kept failing began returning 503 and never stopped. Restarting did not help; shipping a new image did not help. The health anchor was a latched flag, and the only code that cleared it could no longer run."
 ---
 
+**The trick:** replace a latched health/gate flag with a value derived live from the data it describes — a derived value can't get stuck set or stuck clear the way a flag can.
+
 ## Issue
 
 An on-premise instance stopped serving. Every request returned 503. Restarting the container did not help. Shipping a new build did not help either.

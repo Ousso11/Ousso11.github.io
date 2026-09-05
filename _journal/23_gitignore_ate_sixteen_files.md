@@ -5,6 +5,8 @@ permalink: /journal/gitignore-patterns-are-recursive/
 excerpt: "A pipeline branch worked perfectly on the machine that wrote it and was unusable from a fresh clone. A gitignore entry of lib/ — added years earlier for build output — matches a directory of that name at any depth."
 ---
 
+**The trick:** a `.gitignore` pattern with no leading slash matches at every depth in the tree. Anchor patterns to the root, and verify a clean clone against `git archive HEAD` — never your own working tree, which already has the files.
+
 ## Issue
 
 A branch worked locally and was unusable from a clean clone. Every pipeline script failed immediately on a missing shared library file.

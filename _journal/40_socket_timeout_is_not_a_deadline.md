@@ -5,6 +5,8 @@ permalink: /journal/socket-timeout-vs-wall-clock-deadline/
 excerpt: "A hot-path call configured with a timeout could hang indefinitely. A server dribbling one byte before each read-timeout window resets the clock every time — the timeout never fires, because it was never bounding the thing that needed bounding."
 ---
 
+**The trick:** a socket timeout bounds one read, not one request. For a real wall-clock deadline on a blocking call you can't cancel, run it on a thread and abandon the thread if the deadline passes.
+
 ## Issue
 
 A call on a latency-sensitive hot path, configured with an explicit timeout, could hang far longer than that timeout — in the worst observed case, indefinitely.

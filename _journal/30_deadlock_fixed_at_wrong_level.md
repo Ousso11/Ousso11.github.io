@@ -5,6 +5,8 @@ permalink: /journal/split-the-locked-part-into-its-own-function/
 excerpt: "A malformed config patch froze the entire proxy, permanently, because every request path calls Current() under the same lock. The first fix removed the self-deadlock and introduced a leaked write lock on both error paths — the common paths for a bad patch."
 ---
 
+**The trick:** never hold a lock across a callback. Split the locked section into its own function whose only exit is a single `defer Unlock`, and run callbacks only after that function returns.
+
 ## Issue
 
 Submitting an invalid configuration patch to the running proxy froze it completely. Not just the reload — every subsequent request, forever, because every request path reads the current configuration under the same lock the reload was holding.

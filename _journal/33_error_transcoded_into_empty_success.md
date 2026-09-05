@@ -5,6 +5,8 @@ permalink: /journal/format-transcoder-needs-an-error-arm/
 excerpt: "When an upstream call failed, the client received a status 400 with a perfectly well-formed, completely empty streaming response — no error text anywhere. Only one of two response paths through the proxy had ever been taught what an error looks like."
 ---
 
+**The trick:** any format transcoder needs an explicit error arm. Parsing only for the success shape silently turns every error into empty-looking success.
+
 ## Issue
 
 A specific request path through our proxy — one that reroutes a request and replays the result as a stream — turned upstream errors into something worse than an error. The client saw HTTP 400, paired with a well-formed streaming payload that opened and closed with no content in between. There was no error message to read anywhere in the response.

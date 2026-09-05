@@ -5,6 +5,8 @@ permalink: /journal/a-serializer-override-is-a-pair/
 excerpt: "After resuming a saved conversation state, a field written as plain text came back as a wrapper object, breaking every downstream string operation. The encoder had been overridden to compress the field. The decoder had not been taught to undo it — and the unit test asserted the broken shape as correct."
 ---
 
+**The trick:** test any encode/decode pair as a round-trip property — `decode(encode(x))` should return `x` — never by pinning the literal output of one side, which will happily bless its own bug.
+
 ## Issue
 
 After resuming an agent's saved state from a checkpoint, a field a node had written as ordinary text came back shaped differently — wrapped in an object instead of being the plain string it was written as. Every downstream operation expecting a string on that field broke.

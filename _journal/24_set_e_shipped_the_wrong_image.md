@@ -5,6 +5,8 @@ permalink: /journal/set-e-and-the-and-and-idiom/
 excerpt: "A build reported failure and pushed the un-flattened image to the registry regardless. Two uses of the [ -n \"$x\" ] && echo idiom returned non-zero on an empty value, and under set -e the script died just before the step that mattered."
 ---
 
+**The trick:** end any `[ cond ] && cmd` idiom with `|| :` when it's the last statement of a script under `set -e` — otherwise a false test aborts the whole script, silently, one line before the step that mattered.
+
 ## Issue
 
 A pipeline stage failed in CI. It also **published its output** — the wrong output. The registry received the raw, un-flattened image under the final tag, and the build reported failure afterwards.
