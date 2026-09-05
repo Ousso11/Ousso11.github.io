@@ -1,7 +1,7 @@
 ---
 title: "The Fast Path That Never Once Ran, for Months"
 collection: journal
-order: 16
+order: 17
 permalink: /journal/a-flag-that-never-varies-is-a-lie/
 excerpt: "Time-to-first-token equalled full generation time for every streaming request, for months. A fast pass-through path existed and was correctly written — gated on a flag that had been set unconditionally on every request, so the branch was unreachable code nobody noticed."
 ---

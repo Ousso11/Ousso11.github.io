@@ -1,7 +1,7 @@
 ---
 title: "The 'Atomic' Write That Failed, Reliably, Only on Linux"
 collection: journal
-order: 18
+order: 19
 permalink: /journal/temp-file-rename-across-filesystems/
 excerpt: "A config persistence routine used the standard temp-file-then-rename pattern for an atomic write. On Linux, where the system temp directory is routinely a different filesystem from the target, the rename fails outright — and the failure path was the one that caused the deadlock in an earlier story."
 ---

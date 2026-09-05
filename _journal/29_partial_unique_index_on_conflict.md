@@ -1,7 +1,7 @@
 ---
 title: "The Unique Index Postgres Swore Didn't Exist"
 collection: journal
-order: 4
+order: 5
 permalink: /journal/partial-unique-index-and-on-conflict/
 excerpt: "Every insert failed with 'no unique or exclusion constraint matching the ON CONFLICT specification' — against a column that demonstrably had a unique index on it. ON CONFLICT does arbiter inference, and a partial index only qualifies if the statement's own predicate implies the index's."
 ---

@@ -1,7 +1,7 @@
 ---
 title: "The Detector That Fired on Talk and Missed the Real Thing"
 collection: journal
-order: 17
+order: 18
 permalink: /journal/substring-match-on-a-framed-protocol/
 excerpt: "Detecting a specific kind of tool call in a streaming response with a raw substring search caused duplicate upstream billing whenever the model merely mentioned the tool's name in prose, and missed real calls whose name was split across a chunk boundary."
 ---

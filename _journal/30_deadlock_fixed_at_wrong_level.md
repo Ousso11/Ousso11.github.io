@@ -1,7 +1,7 @@
 ---
 title: "One Bad Config Patch Froze the Proxy, Forever"
 collection: journal
-order: 12
+order: 13
 permalink: /journal/split-the-locked-part-into-its-own-function/
 excerpt: "A malformed config patch froze the entire proxy, permanently, because every request path calls Current() under the same lock. The first fix removed the self-deadlock and introduced a leaked write lock on both error paths — the common paths for a bad patch."
 ---

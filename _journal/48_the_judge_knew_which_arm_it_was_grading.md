@@ -1,7 +1,7 @@
 ---
 title: "The Judge Already Knew the Answer It Was Grading"
 collection: journal
-order: 7
+order: 8
 permalink: /journal/blind-the-judge-and-measure-its-noise/
 excerpt: "A benchmark's judge prompt labelled one answer as coming from the treated arm and printed the exact compression ratio applied to it. A judge primed to expect degradation will find it — and small differences between configurations turned out to be smaller than the judge's own noise floor."
 ---

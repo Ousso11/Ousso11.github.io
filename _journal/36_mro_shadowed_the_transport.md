@@ -1,7 +1,7 @@
 ---
 title: "Two Methods Shared One Name. Only One of Them Worked."
 collection: journal
-order: 15
+order: 16
 permalink: /journal/method-override-with-a-different-signature/
 excerpt: "An async client call raised TypeError about unexpected arguments, only on the async path. A subclass had defined a method with the exact same name as a base-class transport method but a completely different signature, and a type: ignore comment was sitting right on top of it."
 ---

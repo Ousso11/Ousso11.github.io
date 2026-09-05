@@ -1,7 +1,7 @@
 ---
 title: "The Server That Restarting Couldn't Fix"
 collection: journal
-order: 8
+order: 9
 permalink: /journal/derived-state-not-latched-flags/
 excerpt: "An on-premise instance whose telemetry uploads kept failing began returning 503 and never stopped. Restarting did not help; shipping a new image did not help. The health anchor was a latched flag, and the only code that cleared it could no longer run."
 ---

@@ -1,7 +1,7 @@
 ---
 title: "The Lock That Worked in Every Test and Hung in Production"
 collection: journal
-order: 11
+order: 12
 permalink: /journal/asyncio-lock-bound-to-wrong-event-loop/
 excerpt: "A repository client's internal lock worked fine in isolated tests and deadlocked or raised confusingly under a real application's request lifecycle. It had been created once, at object construction, capturing whatever event loop happened to be running at that moment — not the one that would later serve requests."
 ---

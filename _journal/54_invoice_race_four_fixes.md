@@ -1,7 +1,7 @@
 ---
 title: "Four Fixes to a Race That Kept Finding New Ways to Lose Money"
 collection: journal
-order: 6
+order: 7
 permalink: /journal/status-guard-is-not-a-version-guard/
 excerpt: "Folding a revoked key's usage into an open invoice lost money under concurrency. Fixing the double-billing created silent under-billing; fixing that covered one of three race paths; and the last one was a plain lost update that a status guard cannot see."
 ---
