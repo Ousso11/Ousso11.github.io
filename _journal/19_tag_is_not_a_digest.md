@@ -1,5 +1,5 @@
 ---
-title: "Tag-Based Image Pinning Let Kubernetes Serve a Deleted Build"
+title: "[11] Tag-Based Image Pinning Let Kubernetes Serve a Deleted Build"
 collection: journal
 order: 11
 permalink: /journal/image-tag-is-not-an-identity/

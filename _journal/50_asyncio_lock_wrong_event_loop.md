@@ -1,5 +1,5 @@
 ---
-title: "An asyncio.Lock Bound to the Wrong Event Loop Caused Production Hangs"
+title: "[12] An asyncio.Lock Bound to the Wrong Event Loop Caused Production Hangs"
 collection: journal
 order: 12
 permalink: /journal/asyncio-lock-bound-to-wrong-event-loop/

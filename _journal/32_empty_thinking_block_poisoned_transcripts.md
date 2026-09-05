@@ -1,5 +1,5 @@
 ---
-title: "Malformed SSE Reconstruction Permanently Corrupted Conversation History"
+title: "[6] Malformed SSE Reconstruction Permanently Corrupted Conversation History"
 collection: journal
 order: 6
 permalink: /journal/fixing-the-writer-doesnt-unpoison-old-data/

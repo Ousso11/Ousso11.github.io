@@ -1,5 +1,5 @@
 ---
-title: "Cross-Filesystem Temp Files Broke an 'Atomic' Config Write on Linux"
+title: "[19] Cross-Filesystem Temp Files Broke an 'Atomic' Config Write on Linux"
 collection: journal
 order: 19
 permalink: /journal/temp-file-rename-across-filesystems/

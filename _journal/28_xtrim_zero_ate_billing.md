@@ -1,5 +1,5 @@
 ---
-title: "A Faulty Error Handler Silently Deleted Unbilled Usage Events"
+title: "[20] A Faulty Error Handler Silently Deleted Unbilled Usage Events"
 collection: journal
 order: 20
 permalink: /journal/empty-is-not-the-same-as-failed/

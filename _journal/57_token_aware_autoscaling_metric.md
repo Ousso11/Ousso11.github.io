@@ -1,5 +1,5 @@
 ---
-title: "A Request-Count Autoscaling Metric Couldn't Detect Token-Heavy Load"
+title: "[3] A Request-Count Autoscaling Metric Couldn't Detect Token-Heavy Load"
 collection: journal
 order: 3
 permalink: /journal/token-aware-autoscaling-metric/

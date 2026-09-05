@@ -1,5 +1,5 @@
 ---
-title: "An Unblinded LLM Judge Biased a Benchmark's Accuracy Comparison"
+title: "[8] An Unblinded LLM Judge Biased a Benchmark's Accuracy Comparison"
 collection: journal
 order: 8
 permalink: /journal/blind-the-judge-and-measure-its-noise/

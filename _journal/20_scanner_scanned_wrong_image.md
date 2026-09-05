@@ -1,5 +1,5 @@
 ---
-title: "A Misconfigured Security Scanner Never Scanned the Intended Image"
+title: "[15] A Misconfigured Security Scanner Never Scanned the Intended Image"
 collection: journal
 order: 15
 permalink: /journal/gate-that-measured-the-wrong-artifact/

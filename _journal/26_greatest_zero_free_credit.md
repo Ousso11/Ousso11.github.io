@@ -1,5 +1,5 @@
 ---
-title: "A Clamped Deduction Let Wallet Balances Go Negative Without Reporting It"
+title: "[2] A Clamped Deduction Let Wallet Balances Go Negative Without Reporting It"
 collection: journal
 order: 2
 permalink: /journal/clamping-is-where-money-goes-to-die/

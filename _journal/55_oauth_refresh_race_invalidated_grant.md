@@ -1,5 +1,5 @@
 ---
-title: "Concurrent Token Refreshes Raced Each Other and Invalidated the OAuth Grant"
+title: "[4] Concurrent Token Refreshes Raced Each Other and Invalidated the OAuth Grant"
 collection: journal
 order: 4
 permalink: /journal/rotating-credentials-need-single-flight/

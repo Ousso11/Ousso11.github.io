@@ -1,5 +1,5 @@
 ---
-title: "A Partial Unique Index Broke ON CONFLICT Arbiter Inference"
+title: "[5] A Partial Unique Index Broke ON CONFLICT Arbiter Inference"
 collection: journal
 order: 5
 permalink: /journal/partial-unique-index-and-on-conflict/

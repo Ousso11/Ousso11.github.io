@@ -1,5 +1,5 @@
 ---
-title: "A Reentrant Lock Deadlock Froze the Proxy on Any Invalid Config Patch"
+title: "[13] A Reentrant Lock Deadlock Froze the Proxy on Any Invalid Config Patch"
 collection: journal
 order: 13
 permalink: /journal/split-the-locked-part-into-its-own-function/
