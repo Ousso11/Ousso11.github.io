@@ -1,5 +1,5 @@
 ---
-title: "Two Runs of 200 Questions. Never the Same 200."
+title: "Mismatched Sample Sets Invalidated a Published Benchmark Comparison"
 collection: journal
 order: 10
 permalink: /journal/ab-comparators-must-intersect-sample-ids/

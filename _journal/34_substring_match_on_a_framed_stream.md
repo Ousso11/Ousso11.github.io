@@ -1,5 +1,5 @@
 ---
-title: "The Detector That Fired on Talk and Missed the Real Thing"
+title: "Substring Matching on a Streaming Protocol Caused False and Missed Detections"
 collection: journal
 order: 18
 permalink: /journal/substring-match-on-a-framed-protocol/

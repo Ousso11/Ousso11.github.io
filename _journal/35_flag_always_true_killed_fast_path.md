@@ -1,5 +1,5 @@
 ---
-title: "The Fast Path That Never Once Ran, for Months"
+title: "A Miswired Feature Flag Disabled Streaming's Fast Path for Months"
 collection: journal
 order: 17
 permalink: /journal/a-flag-that-never-varies-is-a-lie/

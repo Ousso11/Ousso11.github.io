@@ -1,5 +1,5 @@
 ---
-title: "Every Number Was a Little Low, and Nothing Ever Failed"
+title: "A Faulty Error Handler Silently Deleted Unbilled Usage Events"
 collection: journal
 order: 20
 permalink: /journal/empty-is-not-the-same-as-failed/

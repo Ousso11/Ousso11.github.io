@@ -1,5 +1,5 @@
 ---
-title: "Nothing Changed in Meaning. The Cache Missed Every Time."
+title: "JSON Re-Serialization Silently Broke Prompt-Cache Prefix Matching"
 collection: journal
 order: 1
 permalink: /journal/parse-mutate-reserialize-breaks-prefix-caches/

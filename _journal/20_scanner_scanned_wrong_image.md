@@ -1,5 +1,5 @@
 ---
-title: "The Security Gate That Never Once Looked at Our Image"
+title: "A Misconfigured Security Scanner Never Scanned the Intended Image"
 collection: journal
 order: 15
 permalink: /journal/gate-that-measured-the-wrong-artifact/

@@ -1,5 +1,5 @@
 ---
-title: "Four Fixes to a Race That Kept Finding New Ways to Lose Money"
+title: "A Missing Version Guard Let Concurrent Invoice Updates Lose Money"
 collection: journal
 order: 7
 permalink: /journal/status-guard-is-not-a-version-guard/

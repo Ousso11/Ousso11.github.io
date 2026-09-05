@@ -1,5 +1,5 @@
 ---
-title: "The Lock That Worked in Every Test and Hung in Production"
+title: "An asyncio.Lock Bound to the Wrong Event Loop Caused Production Hangs"
 collection: journal
 order: 12
 permalink: /journal/asyncio-lock-bound-to-wrong-event-loop/

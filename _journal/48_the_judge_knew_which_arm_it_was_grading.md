@@ -1,5 +1,5 @@
 ---
-title: "The Judge Already Knew the Answer It Was Grading"
+title: "An Unblinded LLM Judge Biased a Benchmark's Accuracy Comparison"
 collection: journal
 order: 8
 permalink: /journal/blind-the-judge-and-measure-its-noise/

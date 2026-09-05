@@ -1,5 +1,5 @@
 ---
-title: "We Set a Timeout. The Request Hung Forever Anyway."
+title: "A Socket-Level Timeout Failed to Bound a Slow-Drip Request"
 collection: journal
 order: 14
 permalink: /journal/socket-timeout-vs-wall-clock-deadline/

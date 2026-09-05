@@ -1,5 +1,5 @@
 ---
-title: "The Server That Restarting Couldn't Fix"
+title: "A Latched Health Flag Left an Instance Permanently Unrecoverable"
 collection: journal
 order: 9
 permalink: /journal/derived-state-not-latched-flags/

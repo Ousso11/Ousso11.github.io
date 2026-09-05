@@ -1,5 +1,5 @@
 ---
-title: "Deposited $0. Balance $0. Spent $10.53."
+title: "A Clamped Deduction Let Wallet Balances Go Negative Without Reporting It"
 collection: journal
 order: 2
 permalink: /journal/clamping-is-where-money-goes-to-die/

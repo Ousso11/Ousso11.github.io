@@ -1,5 +1,5 @@
 ---
-title: "The Image That Didn't Exist Anymore, Still Running in Production"
+title: "Tag-Based Image Pinning Let Kubernetes Serve a Deleted Build"
 collection: journal
 order: 11
 permalink: /journal/image-tag-is-not-an-identity/

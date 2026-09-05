@@ -1,5 +1,5 @@
 ---
-title: "Two Methods Shared One Name. Only One of Them Worked."
+title: "A Method Name Collision Broke Requests on the Async Path Only"
 collection: journal
 order: 16
 permalink: /journal/method-override-with-a-different-signature/
