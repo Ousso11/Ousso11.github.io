@@ -9,37 +9,18 @@ excerpt: "Every insert failed with 'no unique or exclusion constraint matching t
 
 ## Issue
 
-Right after shipping event-id deduplication for the billing pipeline, the background flush began quarantining every row. Postgres was returning:
-
-```
-42P10: no unique or exclusion constraint matching the ON CONFLICT specification
-```
-
-against a column that had a unique index on it. `\d usage_logs` showed the index. The insert named the same column. Postgres disagreed.
+Every insert into a billing pipeline started failing with `42P10: no unique or exclusion constraint matching the ON CONFLICT specification` — against a column that visibly had a unique index.
 
 ## Root Cause
 
-The index had been created as a **partial** index:
-
-```sql
-CREATE UNIQUE INDEX ... ON usage_logs (event_id) WHERE event_id IS NOT NULL;
-```
-
-That is the natural choice — legacy rows predating the column have `NULL`, and a partial index seems like the polite way to exclude them.
-
-But `ON CONFLICT` does not do an index lookup. It does **arbiter inference**: it will only use a partial index if the *statement's own predicate provably implies the index's predicate*. Our inserts went through a REST layer that emits a plain `INSERT ... ON CONFLICT (event_id) DO NOTHING` and has no way to attach a `WHERE event_id IS NOT NULL`. With no matching *total* index, inference fails and Postgres raises 42P10 rather than silently picking something close.
+The index was partial: `UNIQUE (event_id) WHERE event_id IS NOT NULL`. `ON CONFLICT` doesn't do a lookup — it proves the statement's predicate implies the index's. Our inserts went through a REST layer that emits a bare `ON CONFLICT (event_id)` with no `WHERE`, so inference failed outright.
 
 ## Solution
 
-Drop the partial index; recreate it without the `WHERE`.
-
-This is safe because of a SQL-standard subtlety that made the predicate pointless to begin with: **NULLs are distinct in a unique index by default**. An unconditional `UNIQUE(event_id)` already permits unlimited legacy `NULL` rows. The `WHERE` bought nothing and cost us arbiter inference.
-
-The inverse of this bug was living elsewhere in the same codebase, and is worth stating because it is the more dangerous direction. A payments table had a partial unique index `WHERE payment_id IS NOT NULL` used for idempotency. A checkout session that arrived with a `NULL` payment id therefore **escaped the constraint entirely** and could be credited twice. Same mechanism, and here the partial predicate did not produce an error — it produced a silent hole in an idempotency guarantee.
+Drop the partial predicate. It bought nothing: NULLs are already distinct in a plain unique index, so an unconditional `UNIQUE(event_id)` already tolerates unlimited legacy NULL rows.
 
 ## 💡 Takeaway
 
-- **`ON CONFLICT` infers an arbiter; it does not look up an index.** It must *prove* your statement's predicate implies the index's, and most ORMs and REST layers cannot express the predicate at all.
-- **Before writing `WHERE col IS NOT NULL` on a unique index, remember the standard already treats NULLs as distinct.** The predicate is usually redundant and always costly.
-- **A partial unique index used for idempotency has a hole exactly where the predicate excludes rows.** Every row outside the predicate is unconstrained — which is fine only if you have proved those rows cannot be duplicates.
-- **A loud error is a gift.** The direction that raised 42P10 cost an afternoon; the direction that silently skipped the constraint cost real money.
+- `ON CONFLICT` needs arbiter inference, which most REST/ORM layers can't express against a partial index.
+- Before writing `WHERE col IS NOT NULL` on a unique index, remember NULLs are already distinct by default.
+- The inverse failure is worse and silent: a partial unique index used for idempotency lets rows outside its predicate double-insert with no error at all.

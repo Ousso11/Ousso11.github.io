@@ -9,22 +9,18 @@ excerpt: "A published cost-and-accuracy comparison had to be retracted and resta
 
 ## Issue
 
-A published head-to-head comparison reported one configuration beating another on both accuracy and cost, at a stated sample size of 200 questions each. Days later it had to be retracted and restated at a smaller, different sample size, with a materially smaller accuracy gap.
+A published benchmark comparison reported one config beating another at n=200 on both cost and accuracy. Days later it had to be retracted and restated at a smaller, different n.
 
 ## Root Cause
 
-A third-party search API the benchmark depended on returned a payment-required error partway through the sweep, once the account's quota ran out. That failure happens at the search step, before either configuration's own processing begins, and the runner handled it the way it handles any per-question exception: record an error and move on, scored downstream as a wrong answer with no further API call.
-
-The two configurations under comparison are not identical in how much work they do per question, so they consumed the shared quota at different rates and hit the cutoff at different points in the run. One arm lost a meaningfully different number of questions to the outage than the other. The result was two "n=200" result sets that were actually two different sample sets of two different sizes, compared as though they were the same 200 questions run under two configurations — which is the entire premise a head-to-head comparison depends on.
-
-Nothing in the comparison tooling checked that both sides' result sets shared the same question identifiers, or even the same count, before printing a side-by-side summary. It printed whatever two dictionaries of aggregate statistics it was handed.
+A third-party search API ran out of quota mid-sweep. Both configurations hit that cutoff at different points, since they don't do equal amounts of work per question — so two "n=200" result sets were actually two different sample sets of two different sizes, compared as if identical. Nothing in the comparison tooling checked that both sides covered the same questions before printing a delta.
 
 ## Solution
 
-Recompute both arms restricted to the intersection of questions where both configurations had actually completed a real run — the subset neither arm lost to the outage. Document explicitly that the dropped tail was unrelated to question content (the run order was shuffled), so restricting to the intersection doesn't introduce its own bias.
+Recompute both arms over the intersection of questions both actually completed, and confirm the dropped tail was content-independent so restricting to the intersection introduces no new bias.
 
 ## 💡 Takeaway
 
-- **Two runs reporting the same sample count are not automatically the same sample set.** Any infrastructure failure that can strike mid-run at different rates for different arms will silently substitute "a comparable-sized set" for "the same set."
-- **A comparator that prints two summaries side by side should refuse to run until it has checked the two result sets actually agree on which questions they cover.** Compute the intersection yourself; don't trust that equal counts imply equal content.
-- **An infrastructure failure scored as "the model got it wrong" is a silent corruption of your accuracy number, not a missing datapoint.** Distinguish "we asked and got a wrong answer" from "we never managed to ask" at the point of failure, not after the fact.
+- Equal sample counts across two runs are not proof of an equal sample set.
+- Any comparator printing a side-by-side delta should refuse to run until it's verified the two sides cover the same items.
+- An infrastructure failure scored as "wrong answer" silently corrupts accuracy — distinguish "asked and got it wrong" from "never managed to ask."

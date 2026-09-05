@@ -9,27 +9,18 @@ excerpt: "A malformed config patch froze the entire proxy, permanently, because 
 
 ## Issue
 
-Submitting an invalid configuration patch to the running proxy froze it completely. Not just the reload — every subsequent request, forever, because every request path reads the current configuration under the same lock the reload was holding.
+A single invalid config patch froze the whole proxy. Every request reads the config under the same lock the reload was holding, so nothing recovered without a restart.
 
 ## Root Cause
 
-The update routine held the write lock for the entire operation, including the loop that notifies subscribers of the new config. One of those subscriber callbacks calls the read-accessor for the current config, which takes the read lock. Go's `RWMutex` is not reentrant, so a writer calling back into a reader of the same lock deadlocks itself, unconditionally, on every update.
+The reload routine held the write lock while notifying subscribers, one of which read the config back under the read lock — a self-deadlock on Go's non-reentrant `RWMutex`. The first fix unlocked manually before the callback loop, which fixed reentrancy but leaked the lock on both early-return error paths — exactly the paths a bad patch takes.
 
-## Solution — attempt one, wrong level
+## Solution
 
-The first fix removed the `defer Unlock()` and instead unlocked manually, right before the callback loop, after copying the subscriber list. That solved the reentrancy: the callbacks now ran unlocked.
-
-It introduced a new bug on the paths that mattered most. There were two early returns above the callback loop — patch validation failure and persist-to-disk failure — and both of them exited **before** reaching the manual unlock. Since a bad patch is exactly what triggers validation failure, the *common* path for the exact scenario we were fixing now leaked the write lock and froze the proxy anyway, just via a different mechanism.
-
-## Solution — attempt two, right level
-
-Split the function. A private function owns the entire critical section and has exactly one exit: `defer Unlock()`, guaranteed on every return including both error paths. It computes the new state and returns it, along with the subscriber list and any error — but it never calls a callback. The public function calls the private one, and only *after* it returns does it run the callback loop, fully outside the lock.
-
-No return path inside the locked function can leak the lock, because there is only one way out of it. And no callback can re-enter the lock, because none of them execute while it's held.
+Split the function: a private function owns the whole critical section with one exit, `defer Unlock`, guaranteed on every return. It returns the new state and subscriber list; only the caller, unlocked, runs the callbacks.
 
 ## 💡 Takeaway
 
-- **When a lock must not be held across a callback, don't hand-roll the unlock.** A manual `Unlock()` placed before a `return` is safe only until someone adds a second early return — which validation code does constantly.
-- **Split the locked work into its own function whose only exit is a `defer`.** Return the follow-up work (callbacks, notifications, I/O) to the caller to run unlocked. This makes "cannot leak the lock" a property of the function's shape, not of everyone remembering to unlock correctly.
-- **Reentrant deadlocks are usually two honest decisions meeting.** Nobody wrote "call back into my own lock" on purpose — one function held a lock for safety, another called a public accessor for convenience, and the two agreed to deadlock the first time they met.
-- **Test the error paths of a lock-holding function as carefully as the success path.** The bug that survived here was invisible on a valid patch and guaranteed on an invalid one — which is precisely the input a fuzzing or property test should throw at it.
+- Don't hand-roll unlocks before a return — split the locked work into its own function whose only exit is `defer`.
+- Test a lock-holding function's error paths as hard as its success path.
+- Reentrant deadlocks are usually two honest decisions meeting, not one obvious bug.
