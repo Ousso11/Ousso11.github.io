@@ -1,5 +1,5 @@
 ---
-title: "Two Concurrent Token Refreshes Invalidated the Whole Grant"
+title: "Two Refreshes Happened at Once. That Cost Us the Whole Login."
 collection: journal
 permalink: /journal/rotating-credentials-need-single-flight/
 excerpt: "Users were intermittently forced to re-authenticate from scratch, for no visible reason. A background refresh and a 401-triggered refresh could race each other, and the refresh endpoint rotates the token on every use — so the loser presented a credential the winner had already spent."

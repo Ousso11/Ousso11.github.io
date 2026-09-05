@@ -1,5 +1,5 @@
 ---
-title: "A Redis Read Error Deleted Every Unbilled Event"
+title: "Every Number Was a Little Low, and Nothing Ever Failed"
 collection: journal
 permalink: /journal/empty-is-not-the-same-as-failed/
 excerpt: "Usage events drained from a Redis Stream into the billing table. A helper returned an empty list on any exception, and the caller read emptiness as permission to XTRIM the stream to zero. Dashboards and invoices were quietly low, with no error anywhere."

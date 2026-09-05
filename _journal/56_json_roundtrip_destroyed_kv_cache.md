@@ -1,5 +1,5 @@
 ---
-title: "A Semantically-Correct JSON Round Trip Silently Destroyed the Prompt Cache"
+title: "Nothing Changed in Meaning. The Cache Missed Every Time."
 collection: journal
 permalink: /journal/parse-mutate-reserialize-breaks-prefix-caches/
 excerpt: "Prompt-cache hit rates collapsed on any request that passed through one code path, with no error and no log line. Parsing the request into a generic map, appending a message, and re-serializing produced byte-for-byte different output from byte-for-byte identical meaning — and a prefix cache only cares about bytes."

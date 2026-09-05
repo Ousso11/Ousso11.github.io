@@ -1,5 +1,5 @@
 ---
-title: "GREATEST(0, balance − amount) Gave Users an Infinite Credit Line"
+title: "Deposited $0. Balance $0. Spent $10.53."
 collection: journal
 permalink: /journal/clamping-is-where-money-goes-to-die/
 excerpt: "Wallets in production showed the impossible triple: deposited $0, balance $0, spent $10.53 — and kept serving. A clamp in the deduction routine absorbed every overshoot, and a write-behind cache turned the resulting lie into a renewable resource."

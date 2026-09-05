@@ -1,5 +1,5 @@
 ---
-title: "A Benchmark's n=200 Headline Was Really Two Different 200s"
+title: "Two Runs of 200 Questions. Never the Same 200."
 collection: journal
 permalink: /journal/ab-comparators-must-intersect-sample-ids/
 excerpt: "A published cost-and-accuracy comparison had to be retracted and restated on a smaller n. A third-party search API ran out of quota mid-sweep, and the two arms being compared died at different points in their run — so neither the sample set nor the count of dropped questions matched."

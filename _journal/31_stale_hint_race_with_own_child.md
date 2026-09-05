@@ -1,5 +1,5 @@
 ---
-title: "The Cleanup Fix That Raced Its Own Daemon Child"
+title: "The Fix That Raced Its Own Cleanup Out the Door"
 collection: journal
 permalink: /journal/fix-reentered-by-your-own-subprocess/
 excerpt: "Deleting a stale routing hint at launch fixed one bug and created another: the launcher re-execs itself as a daemon, so the child ran the same cleanup and deleted the hint the parent had just written. If a process re-execs itself, every startup side effect runs twice."

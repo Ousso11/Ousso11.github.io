@@ -1,5 +1,5 @@
 ---
-title: "Production Was Serving Bytes That No Longer Existed in the Registry"
+title: "The Image That Didn't Exist Anymore, Still Running in Production"
 collection: journal
 permalink: /journal/image-tag-is-not-an-identity/
 excerpt: "The Deployment spec showed exactly the image we intended. The pods had been serving an 18-hour-old build whose digest had already been deleted from the registry. A tag is a name; with imagePullPolicy IfNotPresent it is also a cache key."

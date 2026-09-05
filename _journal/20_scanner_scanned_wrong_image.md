@@ -1,5 +1,5 @@
 ---
-title: "Five Fixes to One Line: The Security Gate That Scanned the Wrong Image"
+title: "The Security Gate That Never Once Looked at Our Image"
 collection: journal
 permalink: /journal/gate-that-measured-the-wrong-artifact/
 excerpt: "A container-configuration gate failed images that passed when scanned by tag, and passed images it had never looked at. It took five attempts, each of which fixed something real and left the gate still capable of reporting on an artefact nobody asked about."
