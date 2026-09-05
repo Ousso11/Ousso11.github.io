@@ -1,5 +1,5 @@
 ---
-title: "The GPU That Said Yes and Ran on CPU"
+title: "[21] The GPU That Said Yes and Ran on CPU"
 collection: journal
 order: 21
 permalink: /journal/onnx-silent-cpu-fallback/

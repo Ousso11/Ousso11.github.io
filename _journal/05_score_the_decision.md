@@ -1,5 +1,5 @@
 ---
-title: "The Autoscaling Study That Crowned the Wrong Winner"
+title: "[25] The Autoscaling Study That Crowned the Wrong Winner"
 collection: journal
 order: 25
 permalink: /journal/score-the-decision-not-the-launch/

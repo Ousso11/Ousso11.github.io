@@ -1,5 +1,5 @@
 ---
-title: "Reducing Padding Overhead with Sequence Bucketing"
+title: "[40] Reducing Padding Overhead with Sequence Bucketing"
 collection: journal
 order: 40
 excerpt: "Group similar-length samples to minimize VRAM waste and stabilize throughput in NLP tasks."

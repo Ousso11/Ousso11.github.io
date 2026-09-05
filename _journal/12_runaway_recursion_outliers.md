@@ -1,5 +1,5 @@
 ---
-title: "5% of Rows Cost $10–60 Each: An Unset Recursion Limit"
+title: "[32] 5% of Rows Cost $10–60 Each: An Unset Recursion Limit"
 collection: journal
 order: 32
 permalink: /journal/langgraph-recursion-outliers/

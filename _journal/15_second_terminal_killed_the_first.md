@@ -1,5 +1,5 @@
 ---
-title: "Starting a Second Agent Killed the First One"
+title: "[35] Starting a Second Agent Killed the First One"
 collection: journal
 order: 35
 permalink: /journal/stale-lock-file-pid-check/

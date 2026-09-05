@@ -1,5 +1,5 @@
 ---
-title: "Speeding Up Distributed Training with vLLM, Flash Attention, and Checkpoint Resuming"
+title: "[42] Speeding Up Distributed Training with vLLM, Flash Attention, and Checkpoint Resuming"
 collection: journal
 order: 42
 excerpt: "Improving distributed training speed using vLLM, Flash Attention, LoRA, gradient checkpointing, and stable checkpoint recovery across multi-node systems."

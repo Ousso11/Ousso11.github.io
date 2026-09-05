@@ -1,5 +1,5 @@
 ---
-title: "A Revoked Key That Kept Working for Three Hours"
+title: "[30] A Revoked Key That Kept Working for Three Hours"
 collection: journal
 order: 30
 permalink: /journal/revoked-key-cache-window/

@@ -1,5 +1,5 @@
 ---
-title: "Ten Days of a Metric Nobody Was Writing"
+title: "[33] Ten Days of a Metric Nobody Was Writing"
 collection: journal
 order: 33
 permalink: /journal/cloudwatch-iam-silent-denial/

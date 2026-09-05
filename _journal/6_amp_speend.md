@@ -1,5 +1,5 @@
 ---
-title: "Fixing Mixed Precision Underutilization for Speed Gains"
+title: "[44] Fixing Mixed Precision Underutilization for Speed Gains"
 collection: journal
 order: 44
 excerpt: "Correctly configuring AMP and autocast led to 2× faster training on NVIDIA GPUs."

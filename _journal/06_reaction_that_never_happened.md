@@ -1,5 +1,5 @@
 ---
-title: "A 47-Second Reaction That Never Happened"
+title: "[26] A 47-Second Reaction That Never Happened"
 collection: journal
 order: 26
 permalink: /journal/lag-must-be-a-transition/

@@ -1,5 +1,5 @@
 ---
-title: "Last Year Was Smaller Than Last 6 Months"
+title: "[23] Last Year Was Smaller Than Last 6 Months"
 collection: journal
 order: 23
 permalink: /journal/postgrest-silent-row-cap/

@@ -1,5 +1,5 @@
 ---
-title: "Speeding Up Graph Similarity Matching with Efficient Tensor Ops"
+title: "[39] Speeding Up Graph Similarity Matching with Efficient Tensor Ops"
 collection: journal
 order: 39
 share: false

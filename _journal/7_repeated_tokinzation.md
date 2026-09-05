@@ -1,5 +1,5 @@
 ---
-title: "Speeding Up Evaluation with Cached Tokenization"
+title: "[45] Speeding Up Evaluation with Cached Tokenization"
 collection: journal
 order: 45
 excerpt: "Avoiding redundant tokenizer calls accelerated validation by up to 3× during fine-tuning."

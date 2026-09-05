@@ -1,5 +1,5 @@
 ---
-title: "A Mutex That Wasn't Enough: Racing on a Global Logger"
+title: "[34] A Mutex That Wasn't Enough: Racing on a Global Logger"
 collection: journal
 order: 34
 permalink: /journal/sync-once-global-logger/

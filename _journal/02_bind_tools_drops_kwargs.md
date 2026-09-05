@@ -1,5 +1,5 @@
 ---
-title: "max_tokens=20 Produced 200 Tokens — Only When Tools Were Attached"
+title: "[22] max_tokens=20 Produced 200 Tokens — Only When Tools Were Attached"
 collection: journal
 order: 22
 permalink: /journal/bind-tools-drops-kwargs/

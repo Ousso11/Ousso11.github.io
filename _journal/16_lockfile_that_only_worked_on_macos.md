@@ -1,5 +1,5 @@
 ---
-title: "A Lockfile That Only Worked on macOS"
+title: "[36] A Lockfile That Only Worked on macOS"
 collection: journal
 order: 36
 permalink: /journal/npm-lockfile-platform-optional-deps/

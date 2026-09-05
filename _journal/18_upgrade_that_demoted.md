@@ -1,5 +1,5 @@
 ---
-title: "The Enterprise Upgrade That Demoted Our Biggest Customers"
+title: "[38] The Enterprise Upgrade That Demoted Our Biggest Customers"
 collection: journal
 order: 38
 permalink: /journal/upgrade-that-demoted/

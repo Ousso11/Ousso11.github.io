@@ -1,5 +1,5 @@
 ---
-title: "The GPU Node That Nothing Could Remove"
+title: "[28] The GPU Node That Nothing Could Remove"
 collection: journal
 order: 28
 permalink: /journal/stranded-burst-gpu-node/

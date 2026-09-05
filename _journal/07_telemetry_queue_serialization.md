@@ -1,5 +1,5 @@
 ---
-title: "32.8 ms of Database Work on Every Compression Request"
+title: "[27] 32.8 ms of Database Work on Every Compression Request"
 collection: journal
 order: 27
 permalink: /journal/telemetry-queue-serialization/

@@ -1,5 +1,5 @@
 ---
-title: "The Cheaper Agent That Wasn't: Mispricing Prompt-Cache Tokens"
+title: "[31] The Cheaper Agent That Wasn't: Mispricing Prompt-Cache Tokens"
 collection: journal
 order: 31
 permalink: /journal/cache-token-mispricing/

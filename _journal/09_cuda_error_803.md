@@ -1,5 +1,5 @@
 ---
-title: "CUDA Error 803 on the Newer Driver"
+title: "[29] CUDA Error 803 on the Newer Driver"
 collection: journal
 order: 29
 permalink: /journal/cuda-error-803-compat-lib/

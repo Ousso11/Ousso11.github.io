@@ -1,5 +1,5 @@
 ---
-title: "Six-Hour Benchmark Sweeps That Survive a Crash"
+title: "[37] Six-Hour Benchmark Sweeps That Survive a Crash"
 collection: journal
 order: 37
 permalink: /journal/atomic-resume-benchmark-sweeps/

@@ -1,5 +1,5 @@
 ---
-title: "A Compression Ratio of Exactly 1.000×"
+title: "[24] A Compression Ratio of Exactly 1.000×"
 collection: journal
 order: 24
 permalink: /journal/json-shaped-input-no-op/
